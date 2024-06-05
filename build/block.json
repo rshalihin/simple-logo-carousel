@@ -1,0 +1,252 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mrs-block/mrs-logo-carousel",
+  "version": "0.1.1",
+  "title": "MRS Logo Carousel",
+  "category": "text",
+  "icon": "slides",
+  "description": "A simple Gutenberg form widget.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "uniqueId": {
+      "type": "string",
+      "default": ""
+    },
+    "slider": {
+      "type": "array",
+      "default": [
+        {
+          "id": "1",
+          "title": "First Title",
+          "description": "First Description",
+          "logo": {
+            "url": "",
+            "alt": "",
+            "imgId": ""
+          }
+        },
+        {
+          "id": "2",
+          "title": "Second Title",
+          "description": "Second Description",
+          "logo": {
+            "url": "",
+            "alt": "",
+            "imgId": ""
+          }
+        },
+        {
+          "id": "3",
+          "title": "Third Title",
+          "description": "Third Description",
+          "logo": {
+            "url": "",
+            "alt": "",
+            "imgId": ""
+          }
+        }
+      ]
+    },
+    "sliderId": {
+      "type": "array",
+      "default": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        },
+        {
+          "id": "3"
+        }
+      ]
+    },
+    "autoPlay": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoPlaySpeed": {
+      "type": "number",
+      "default": 3000
+    },
+    "infiniteLoop": {
+      "type": "boolean",
+      "default": true
+    },
+    "pauseOn": {
+      "type": "string",
+      "default": "Hover"
+    },
+    "enableTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "titleTag": {
+      "type": "string",
+      "default": "h4"
+    },
+    "sliderTitle": {
+      "type": "array",
+      "default": [
+        {
+          "id": "1",
+          "title": "First Title"
+        },
+        {
+          "id": "2",
+          "title": "Second Title"
+        },
+        {
+          "id": "3",
+          "title": "Third Title"
+        }
+      ]
+    },
+    "enableDescription": {
+      "type": "boolean",
+      "default": true
+    },
+    "descriptionTag": {
+      "type": "string",
+      "default": "p"
+    },
+    "sliderDescription": {
+      "type": "array",
+      "default": [
+        {
+          "id": "1",
+          "description": "First Description"
+        },
+        {
+          "id": "2",
+          "description": "Second Description"
+        },
+        {
+          "id": "3",
+          "description": "Third Description"
+        }
+      ]
+    },
+    "enableLogo": {
+      "type": "boolean",
+      "default": true
+    },
+    "sliderLogoImage": {
+      "type": "array",
+      "default": [
+        {
+          "id": "1",
+          "imgId": "",
+          "url": "",
+          "alt": ""
+        },
+        {
+          "id": "2",
+          "imgId": "",
+          "url": "",
+          "alt": ""
+        },
+        {
+          "id": "3",
+          "imgId": "",
+          "url": "",
+          "alt": ""
+        }
+      ]
+    },
+    "logoPosition": {
+      "type": "string",
+      "default": "above"
+    },
+    "targetLink": {
+      "type": "boolean",
+      "default": false
+    },
+    "linkFollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "enableNavigationArrows": {
+      "type": "boolean",
+      "default": true
+    },
+    "enablePaginationDots": {
+      "type": "boolean",
+      "default": true
+    },
+    "slidePerView": {
+      "type": "number",
+      "default": 1
+    },
+    "slideSpaceBetween": {
+      "type": "number",
+      "default": 1
+    },
+    "sliderAlignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "sliderBGColor": {
+      "type": "string",
+      "default": ""
+    },
+    "sliderTitleColor": {
+      "type": "string",
+      "default": ""
+    },
+    "sliderDesColor": {
+      "type": "string",
+      "default": ""
+    },
+    "navigationArrowColor": {
+      "type": "string",
+      "default": ""
+    },
+    "paginationDotColor": {
+      "type": "string",
+      "default": ""
+    },
+    "desktopHide": {
+      "type": "boolean",
+      "default": false
+    },
+    "tabletHide": {
+      "type": "boolean",
+      "default": false
+    },
+    "mobileHide": {
+      "type": "boolean",
+      "default": false
+    },
+    "sliderMargin": {
+      "type": "object",
+      "default": {
+        "top": "0",
+        "left": "0",
+        "bottom": "0",
+        "right": "0"
+      }
+    },
+    "sliderPadding": {
+      "type": "object",
+      "default": {
+        "top": "0",
+        "left": "0",
+        "bottom": "0",
+        "right": "0"
+      }
+    }
+  },
+  "textdomain": "mrs-logo-carousel",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

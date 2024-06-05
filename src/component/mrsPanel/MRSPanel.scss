@@ -1,0 +1,94 @@
+.components-panel__body {
+    .mrs-logo-carousel-single-slide-sidebar-tab{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        position: relative;
+        .components-panel__body {
+            flex-grow: 4;
+            margin: 1px 0;
+            border-radius: 5px;
+            .components-panel__body-title {
+                background-color: #eeeeee;
+                .components-button {
+                    &.components-panel__body-toggle {
+                        .components-panel__arrow {
+                            right: 45px;
+                        }
+                    }
+                }
+            }
+        }
+        .mrs-logo-carousel-single-slide-sidebar-tab-close-button {
+            width: 40px;
+            height: 40px;
+            flex-grow: 1;
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            color: #f03;
+            border: 1px solid #f03;
+        }
+        .mrs-logo-carousel-single-slide-sidebar-tab-content {
+            background: #fff;
+            .mrs-media-control__wrapper {
+                height: 130px;
+                width: 100%;
+                border-radius: 3px;
+                border: 1px solid #e6e7e9;
+                position: relative;
+                background-color: #fff;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                -webkit-display: flex;
+                -moz-display: flex;
+                -ms-display: flex;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                .mrs-media-control__footer {
+                    background: #f0f0f1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .mrs-fbtn-control-label {
+                        flex-grow: 1;
+                        height: 26px;
+                        margin-bottom: 0;
+                        border: 0;
+                        padding: 0;
+                        cursor: pointer;
+                        font-size: 12px;
+                        justify-content: center;
+                    }
+                }
+                .mrs-media-control__clickable {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+        .components-panel__body {
+            &.is-opened {
+                .components-panel__body-title {
+                    .components-panel__body-toggle {
+                        .components-panel__arrow {
+                            right: 70px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-opened {
+        .components-panel__body-title {
+            .mrs-logo-carousel-single-slide-sidebar-tab {
+                
+            }                
+        }
+    }
+}

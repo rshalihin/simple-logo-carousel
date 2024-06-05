@@ -1,0 +1,21 @@
+.mrs-tab-panel{
+    .mrs-toggle {
+        .components-flex {
+            flex-direction: row-reverse;
+        }
+        .components-toggle-control__label{
+            margin-bottom: 0px;
+        }
+        .components-form-toggle.is-checked .components-form-toggle__track{
+            background: #008DB4;
+        }
+        .components-form-toggle.is-checked .components-form-toggle__thumb{
+            background: #fff;
+        }
+        .components-form-toggle .components-form-toggle__thumb{
+            background: #757575;
+            border-color: #757575;
+
+        }
+    }
+}

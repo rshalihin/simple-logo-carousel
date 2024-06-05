@@ -1,0 +1,221 @@
+// Tab Panel Style
+*{
+    margin: 0;
+    padding: 0;
+}
+.block-editor-block-inspector .mrs-tab-panel .components-base-control:last-child{
+    margin-bottom: 0px;
+}
+div:has(>.mrs-tab-panel) ~ div:has(>.block-editor-block-inspector__advanced) {
+    display: none;
+}
+.mrs-tab-panel{
+    .components-tab-panel__tabs-item:focus:not(:disabled) {
+        box-shadow: none;
+    }
+    .components-tab-panel__tabs {
+        justify-content: center;
+    }
+    .components-tab-panel__tabs > button {
+        padding: 0;
+    }
+    .components-tab-panel__tabs button {
+        background-color: #0f7165;
+        color: #fff;
+        height: 40px;
+        width: 100%;
+        justify-content: center;
+    }
+    .components-tab-panel__tabs button:not(:last-child) {
+        border-right: 1px solid #fff;
+    }
+    .components-tab-panel__tabs button span{
+        display: flex;
+        align-items: center;
+        svg{
+           margin-right: 4px;
+           fill: #fff;
+        }
+    }
+    .components-tab-panel__tabs button.active-tab {
+        background-color: #ffffff;
+        color: #0f7165;
+        border-bottom-color: transparent;
+        border-top: 2px solid;
+        span{
+           svg{
+              fill: #0f7165;
+           }
+        }
+    }
+    .components-panel__body.is-opened > .components-panel__body-title{
+        background-color: #F0F0F0;
+        margin-bottom: 12px;
+    }
+    .components-panel__body .components-panel__body-title button:focus:not(:disabled){
+        box-shadow: none;
+        outline: none;
+    }
+
+    // mrs accordion item style.
+    .mrs-accordion{
+       margin: 12px 0; 
+    }
+    // mrs component margin bottom.
+    .mrs-component-mb{
+        margin-bottom: 24px;
+    }
+    .mrs-component-mb:last-child{
+        margin-bottom: 0px;
+    }
+
+    // mrs title style
+    .mrs-component-top {
+        display: flex;
+    }
+    .mrs-ranger-title,
+    .components-base-control__label,
+    .components-input-control__label,
+    .components-toggle-control__label,
+    .mrs-component-title {
+        text-transform: uppercase;
+        color: #757575;
+        font-weight: 700;
+        font-size: 11px;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+
+    .components-input-control__label{
+        margin-bottom: 0;
+        font-weight: 700 !important;
+    }
+
+    // Header button controls style.
+    .mrs-header-control{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        &-left{
+            display: flex;
+        }
+        &-right{
+            display: flex;
+            margin-top: 2px;
+        }
+        &-reset{
+            height: 18px;
+            padding: 0;
+            margin-right: 10px;
+            &.active{
+                color: #0f7165;
+            }
+            &:focus:not(:disabled){
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    // mrs units button style.
+    .mrs-units{
+        position: relative;
+        color: #8C8F94;
+        &-btn{
+            box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
+            position: absolute;
+            z-index: 999;
+            margin-top: 2px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+        }
+        &:hover .mrs-units-btn{
+            opacity: 1;
+            visibility: visible;
+        }
+        &:hover{
+            span{
+                border-color: #0f7165;
+                color: #0f7165;
+                svg {
+                    fill: #0f7165;
+                }
+            }
+        }
+        span{
+            display: inline-block;
+            font-size: 10px;
+            padding: 0px;
+            width: 23px;
+            height: 20px;
+            border: 1px solid #8C8F94;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px;
+            cursor: pointer;
+            text-transform: capitalize;
+            svg {
+                fill: #8C8F94;
+            }
+        }
+        span.box-unit{
+            width: 45px !important;
+        }
+        button {
+            padding: 0;
+            width: 23px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            font-size: 10px;
+            border: none;
+            color: #8C8F94;
+            border-radius: 0;
+            box-shadow: none;
+            &:focus:not(:disabled){
+                outline: none;
+                box-shadow: none;
+            }
+            &.active{
+                background-color: #0f7165;
+                color: #fff;
+            }
+        }
+    }
+    .mrs-units.box{
+        .mrs-units-btn {
+            button{
+                width: 45px;
+            }
+        } 
+    }
+}
+
+p.mrs-child-block-notice {
+    padding: 20px;
+    margin: 0 16px 16px;
+    background-color: #f1f1f1;
+}
+
+.edit-post-editor__list-view-panel-content .is-selected .mrs-block-icon {
+    svg{
+        fill: #fff !important;
+    }
+}
+
+.mrs-block-icon {
+    display: inline-flex;
+    svg{
+        fill: #0f7165 !important;
+    }
+}
+ 
+.block-editor-block-inspector .mrs-tab-panel .components-panel__body:first-child {
+    border-top: none;
+}
+
+
+
