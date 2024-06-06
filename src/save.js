@@ -2,7 +2,7 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
 import './style.scss';
 
 export default function save({attributes}) {
-	const {desktopHide, tabletHide, mobileHide, sliderBGColor, sliderId, sliderAlignment, logoPosition, enableTitle, sliderTitle, sliderTitleColor, titleTag, sliderLogoImage, enableDescription, sliderDescription, sliderDesColor, descriptionTag, sliderMargin, sliderPadding, enableNavigationArrows, enablePaginationDots, sliderBorder, sliderBorderStyle, sliderBorderColor } = attributes;
+	const {desktopHide, tabletHide, mobileHide, sliderBGColor, sliderId, sliderAlignment, logoPosition, enableTitle, sliderTitle, sliderTitleColor, titleTag, sliderLogoImage, enableDescription, sliderDescription, sliderDesColor, descriptionTag, sliderMargin, sliderPadding, enableNavigationArrows, enablePaginationDots, sliderBorder, sliderBorderStyle, sliderBorderColor, singleSlideBorder, singleSlideBorderStyle, singleSlideBorderColor, singleSlideMargin, singleSlidePadding } = attributes;
 
 	const swiperJson = JSON.stringify(attributes);
 
@@ -19,7 +19,14 @@ export default function save({attributes}) {
 						<div className="swiper-wrapper">
 						{sliderId?.map((slideId, i)=>(
 
-							<div className="swiper-slide">								
+							<div className="swiper-slide" style={{background: sliderBGColor,
+								borderTop: `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+								borderBottom: `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+								borderRight: `${singleSlideBorder.right} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+								borderLeft: `${singleSlideBorder.left} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+								marginTop: `${singleSlideMargin.top}`, marginBottom: `${singleSlideMargin.bottom}`, marginLeft: `${singleSlideMargin.left}`, marginRight: `${singleSlideMargin.right}`,
+								paddingTop: `${singleSlidePadding.top}`, paddingBottom: `${singleSlidePadding.bottom}`, paddingRight: `${singleSlidePadding.right}`, paddingLeft: `${singleSlidePadding.left}`
+								}}>
 								<div key={i} className={'mrs-logo-carousel-swiper-slider-content-wrapper'}  style={{textAlign: sliderAlignment}}>
 
 								{/** Above Title */}

@@ -768,7 +768,12 @@ function Edit({
     sliderPadding,
     sliderBorder,
     sliderBorderStyle,
-    sliderBorderColor
+    sliderBorderColor,
+    singleSlideBorder,
+    singleSlideBorderStyle,
+    singleSlideBorderColor,
+    singleSlideMargin,
+    singleSlidePadding
   } = attributes;
   const [onLoad, setOnLoad] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.useState)(false);
   const {
@@ -891,7 +896,19 @@ function Edit({
     className: "mrsSwiper"
   }, sliderId?.map((slideId, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(swiper_react__WEBPACK_IMPORTED_MODULE_8__.SwiperSlide, {
     style: {
-      background: sliderBGColor
+      background: sliderBGColor,
+      borderTop: `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      borderBottom: `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      borderRight: `${singleSlideBorder.right} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      borderLeft: `${singleSlideBorder.left} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      marginTop: `${singleSlideMargin.top}`,
+      marginBottom: `${singleSlideMargin.bottom}`,
+      marginLeft: `${singleSlideMargin.left}`,
+      marginRight: `${singleSlideMargin.right}`,
+      paddingTop: `${singleSlidePadding.top}`,
+      paddingBottom: `${singleSlidePadding.bottom}`,
+      paddingRight: `${singleSlidePadding.right}`,
+      paddingLeft: `${singleSlidePadding.left}`
     }
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RSSlider__WEBPACK_IMPORTED_MODULE_7__["default"], {
     key: i,
@@ -1166,7 +1183,12 @@ function save({
     enablePaginationDots,
     sliderBorder,
     sliderBorderStyle,
-    sliderBorderColor
+    sliderBorderColor,
+    singleSlideBorder,
+    singleSlideBorderStyle,
+    singleSlideBorderColor,
+    singleSlideMargin,
+    singleSlidePadding
   } = attributes;
   const swiperJson = JSON.stringify(attributes);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -1200,7 +1222,22 @@ function save({
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "swiper-wrapper"
   }, sliderId?.map((slideId, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "swiper-slide"
+    className: "swiper-slide",
+    style: {
+      background: sliderBGColor,
+      borderTop: `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      borderBottom: `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      borderRight: `${singleSlideBorder.right} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      borderLeft: `${singleSlideBorder.left} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      marginTop: `${singleSlideMargin.top}`,
+      marginBottom: `${singleSlideMargin.bottom}`,
+      marginLeft: `${singleSlideMargin.left}`,
+      marginRight: `${singleSlideMargin.right}`,
+      paddingTop: `${singleSlidePadding.top}`,
+      paddingBottom: `${singleSlidePadding.bottom}`,
+      paddingRight: `${singleSlidePadding.right}`,
+      paddingLeft: `${singleSlidePadding.left}`
+    }
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     key: i,
     className: 'mrs-logo-carousel-swiper-slider-content-wrapper',
@@ -1314,12 +1351,33 @@ const StyleTab = ({
     navigationArrowSize,
     sliderBorder,
     sliderBorderStyle,
-    sliderBorderColor
+    sliderBorderColor,
+    singleSlideBorderColor,
+    singleSlideBorderStyle,
+    singleSlideBorder,
+    singleSlideMargin,
+    singleSlidePadding
   } = attributes;
   const onChangeSliderBorder = newValue => {
     setAttributes({
       sliderBorder: newValue
     });
+  };
+  const onChangeSingleSlideBorder = newValue => {
+    setAttributes({
+      singleSlideBorder: newValue
+    });
+  };
+  const onChangeSingleSlideMargin = newValue => {
+    setAttributes({
+      singleSlideMargin: newValue
+    });
+  };
+  const onChangeSingleSlidePadding = newValue => {
+    setAttributes({
+      singleSlidePadding: newValue
+    });
+    console.log(newValue);
   };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Content', 'mrs-logo-carousel'),
@@ -1341,11 +1399,8 @@ const StyleTab = ({
     onClick: () => setAttributes({
       sliderAlignment: 'Right'
     })
-  }, "Right"))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Settings', 'mrs-log-carousel'),
-    initialOpen: false,
-    className: "mrs-logo-carousel-style-tab-panel-slider"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Color Settings', 'mrs-logo-carousel')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
+  }, "Right")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Content Color Settings', 'mrs-logo-carousel'),
     disableCustomColors: false,
     colorSettings: [{
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Title Color', 'mrs-log-carousel'),
@@ -1372,7 +1427,11 @@ const StyleTab = ({
         });
       }
     }]
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Settings', 'mrs-log-carousel'),
+    initialOpen: false,
+    className: "mrs-logo-carousel-style-tab-panel-slider"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Color', 'mrs-logo-carousel'),
     disableCustomColors: false,
     colorSettings: [{
@@ -1419,6 +1478,65 @@ const StyleTab = ({
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Settings', 'mrs-logo-carousel'),
     values: sliderBorder,
     onChange: onChangeSliderBorder
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Settings', 'mrs-log-carousel'),
+    initialOpen: false,
+    className: "mrs-logo-carousel-style-tab-panel-slider"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Color', 'mrs-logo-carousel'),
+    disableCustomColors: false,
+    colorSettings: [{
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Border Color', 'mrs-logo-carousel'),
+      value: singleSlideBorderColor,
+      onChange: value => {
+        setAttributes({
+          singleSlideBorderColor: value
+        });
+      }
+    }]
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Border Style', 'mrs-logo-carousel'),
+    options: [{
+      label: 'None',
+      value: 'none'
+    }, {
+      label: 'Solid',
+      value: 'solid'
+    }, {
+      label: 'Dashed',
+      value: 'dashed'
+    }, {
+      label: 'Dotted',
+      value: 'dotted'
+    }, {
+      label: 'Double',
+      value: 'double'
+    }, {
+      label: 'Groove',
+      value: 'groove'
+    }, {
+      label: 'Inset',
+      value: 'inset'
+    }, {
+      label: 'Outset',
+      value: 'outset'
+    }],
+    value: singleSlideBorderStyle,
+    onChange: value => setAttributes({
+      singleSlideBorderStyle: value
+    })
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBoxControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Border Settings', 'mrs-logo-carousel'),
+    values: singleSlideBorder,
+    onChange: onChangeSingleSlideBorder
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBoxControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Margin', 'mrs-logo-carousel'),
+    values: singleSlideMargin,
+    onChange: onChangeSingleSlideMargin
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBoxControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Padding', 'mrs-logo-carousel'),
+    values: singleSlidePadding,
+    onChange: onChangeSingleSlidePadding
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Navigation Settings', 'mrs-log-carousel'),
     initialOpen: false
@@ -12811,7 +12929,7 @@ SwiperSlide.displayName = 'SwiperSlide';
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"mrs-block/mrs-logo-carousel","version":"0.1.1","title":"MRS Logo Carousel","category":"text","icon":"slides","description":"A simple Gutenberg form widget.","example":{},"supports":{"html":false,"align":["wide","full"]},"attributes":{"uniqueId":{"type":"string","default":""},"slider":{"type":"array","default":[{"id":"1","title":"First Title","description":"First Description","logo":{"url":"","alt":"","imgId":""}},{"id":"2","title":"Second Title","description":"Second Description","logo":{"url":"","alt":"","imgId":""}},{"id":"3","title":"Third Title","description":"Third Description","logo":{"url":"","alt":"","imgId":""}}]},"sliderId":{"type":"array","default":[{"id":"1"},{"id":"2"},{"id":"3"}]},"autoPlay":{"type":"boolean","default":true},"autoPlaySpeed":{"type":"number","default":3000},"infiniteLoop":{"type":"boolean","default":true},"pauseOn":{"type":"string","default":"Hover"},"enableTitle":{"type":"boolean","default":true},"titleTag":{"type":"string","default":"h4"},"sliderTitle":{"type":"array","default":[{"id":"1","title":"First Title"},{"id":"2","title":"Second Title"},{"id":"3","title":"Third Title"}]},"enableDescription":{"type":"boolean","default":true},"descriptionTag":{"type":"string","default":"p"},"sliderDescription":{"type":"array","default":[{"id":"1","description":"First Description"},{"id":"2","description":"Second Description"},{"id":"3","description":"Third Description"}]},"enableLogo":{"type":"boolean","default":true},"sliderLogoImage":{"type":"array","default":[{"id":"1","imgId":"","url":"","alt":""},{"id":"2","imgId":"","url":"","alt":""},{"id":"3","imgId":"","url":"","alt":""}]},"logoPosition":{"type":"string","default":"above"},"targetLink":{"type":"boolean","default":false},"linkFollow":{"type":"boolean","default":false},"enableNavigationArrows":{"type":"boolean","default":true},"enablePaginationDots":{"type":"boolean","default":true},"slidePerView":{"type":"number","default":1},"slideSpaceBetween":{"type":"number","default":1},"sliderAlignment":{"type":"string","default":"center"},"sliderBGColor":{"type":"string","default":""},"sliderTitleColor":{"type":"string","default":""},"sliderDesColor":{"type":"string","default":""},"navigationArrowColor":{"type":"string","default":""},"navigationArrowSize":{"type":"number","default":30},"paginationDotColor":{"type":"string","default":""},"desktopHide":{"type":"boolean","default":false},"tabletHide":{"type":"boolean","default":false},"mobileHide":{"type":"boolean","default":false},"sliderMargin":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderPadding":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderBorder":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderBorderStyle":{"type":"string","default":"none"},"sliderBorderColor":{"type":"string","default":""}},"textdomain":"mrs-logo-carousel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"mrs-block/mrs-logo-carousel","version":"0.1.1","title":"MRS Logo Carousel","category":"text","icon":"slides","description":"A simple Gutenberg form widget.","example":{},"supports":{"html":false,"align":["wide","full"]},"attributes":{"uniqueId":{"type":"string","default":""},"slider":{"type":"array","default":[{"id":"1","title":"First Title","description":"First Description","logo":{"url":"","alt":"","imgId":""}},{"id":"2","title":"Second Title","description":"Second Description","logo":{"url":"","alt":"","imgId":""}},{"id":"3","title":"Third Title","description":"Third Description","logo":{"url":"","alt":"","imgId":""}}]},"sliderId":{"type":"array","default":[{"id":"1"},{"id":"2"},{"id":"3"}]},"autoPlay":{"type":"boolean","default":true},"autoPlaySpeed":{"type":"number","default":3000},"infiniteLoop":{"type":"boolean","default":true},"pauseOn":{"type":"string","default":"Hover"},"enableTitle":{"type":"boolean","default":true},"titleTag":{"type":"string","default":"h4"},"sliderTitle":{"type":"array","default":[{"id":"1","title":"First Title"},{"id":"2","title":"Second Title"},{"id":"3","title":"Third Title"}]},"enableDescription":{"type":"boolean","default":true},"descriptionTag":{"type":"string","default":"p"},"sliderDescription":{"type":"array","default":[{"id":"1","description":"First Description"},{"id":"2","description":"Second Description"},{"id":"3","description":"Third Description"}]},"enableLogo":{"type":"boolean","default":true},"sliderLogoImage":{"type":"array","default":[{"id":"1","imgId":"","url":"","alt":""},{"id":"2","imgId":"","url":"","alt":""},{"id":"3","imgId":"","url":"","alt":""}]},"logoPosition":{"type":"string","default":"above"},"targetLink":{"type":"boolean","default":false},"linkFollow":{"type":"boolean","default":false},"enableNavigationArrows":{"type":"boolean","default":true},"enablePaginationDots":{"type":"boolean","default":true},"slidePerView":{"type":"number","default":1},"slideSpaceBetween":{"type":"number","default":1},"sliderAlignment":{"type":"string","default":"center"},"sliderBGColor":{"type":"string","default":""},"sliderTitleColor":{"type":"string","default":""},"sliderDesColor":{"type":"string","default":""},"navigationArrowColor":{"type":"string","default":""},"navigationArrowSize":{"type":"number","default":30},"paginationDotColor":{"type":"string","default":""},"desktopHide":{"type":"boolean","default":false},"tabletHide":{"type":"boolean","default":false},"mobileHide":{"type":"boolean","default":false},"sliderMargin":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderPadding":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderBorder":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderBorderStyle":{"type":"string","default":"none"},"sliderBorderColor":{"type":"string","default":""},"singleSlideBorder":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"singleSlideBorderStyle":{"type":"string","default":"none"},"singleSlideBorderColor":{"type":"string","default":""},"singleSlideMargin":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"singleSlidePadding":{"type":"object","default":{"top":"0px","left":"0px","bottom":"0px","right":"0px"}}},"textdomain":"mrs-logo-carousel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

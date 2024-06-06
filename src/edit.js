@@ -23,7 +23,7 @@ import './editor.scss';
 let firstTimeLoad = true;
 
 export default function Edit({ attributes, setAttributes, clientId, isSelected }) {
-	const { uniqueId, enableNavigationArrows, enablePaginationDots, slidePerView, slideSpaceBetween, infiniteLoop, autoPlay, pauseOn, autoPlaySpeed, sliderId, sliderAlignment, sliderTitle, sliderDescription, sliderLogoImage, sliderBGColor, desktopHide, tabletHide, mobileHide, sliderMargin, sliderPadding, sliderBorder, sliderBorderStyle, sliderBorderColor } = attributes;
+	const { uniqueId, enableNavigationArrows, enablePaginationDots, slidePerView, slideSpaceBetween, infiniteLoop, autoPlay, pauseOn, autoPlaySpeed, sliderId, sliderAlignment, sliderTitle, sliderDescription, sliderLogoImage, sliderBGColor, desktopHide, tabletHide, mobileHide, sliderMargin, sliderPadding, sliderBorder, sliderBorderStyle, sliderBorderColor, singleSlideBorder, singleSlideBorderStyle, singleSlideBorderColor, singleSlideMargin, singleSlidePadding } = attributes;
 
 	const [ onLoad, setOnLoad ] = useState(false);
 
@@ -118,7 +118,14 @@ export default function Edit({ attributes, setAttributes, clientId, isSelected }
 					className="mrsSwiper"
 				>
 					{sliderId?.map((slideId, i)=>(
-						<SwiperSlide  style={{background: sliderBGColor}}>
+						<SwiperSlide  style={{background: sliderBGColor,
+						borderTop: `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+						borderBottom: `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+						borderRight: `${singleSlideBorder.right} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+						borderLeft: `${singleSlideBorder.left} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+						marginTop: `${singleSlideMargin.top}`, marginBottom: `${singleSlideMargin.bottom}`, marginLeft: `${singleSlideMargin.left}`, marginRight: `${singleSlideMargin.right}`,
+						paddingTop: `${singleSlidePadding.top}`, paddingBottom: `${singleSlidePadding.bottom}`, paddingRight: `${singleSlidePadding.right}`, paddingLeft: `${singleSlidePadding.left}`
+						}}>
 							<RSSlider key={i} dataId={slideId.id} attributes={attributes} setAttributes={setAttributes}>
 							</RSSlider>
 						</SwiperSlide>

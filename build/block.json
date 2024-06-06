@@ -264,6 +264,41 @@
     "sliderBorderColor": {
       "type": "string",
       "default": ""
+    },
+    "singleSlideBorder": {
+      "type": "object",
+      "default": {
+        "top": "0",
+        "left": "0",
+        "bottom": "0",
+        "right": "0"
+      }
+    },
+    "singleSlideBorderStyle": {
+      "type": "string",
+      "default": "none"
+    },
+    "singleSlideBorderColor": {
+      "type": "string",
+      "default": ""
+    },
+    "singleSlideMargin": {
+      "type": "object",
+      "default": {
+        "top": "0",
+        "left": "0",
+        "bottom": "0",
+        "right": "0"
+      }
+    },
+    "singleSlidePadding": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "left": "0px",
+        "bottom": "0px",
+        "right": "0px"
+      }
     }
   },
   "textdomain": "mrs-logo-carousel",

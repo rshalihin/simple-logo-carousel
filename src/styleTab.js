@@ -5,11 +5,23 @@ import RSRangeControl from './component/RSRangeControl/RSRangeControl';
 
 const StyleTab = ({attributes, setAttributes}) => {
 
-    const {sliderAlignment, sliderBGColor, sliderTitleColor, sliderDesColor, navigationArrowColor, paginationDotColor, enableNavigationArrows,  navigationArrowSize, sliderBorder, sliderBorderStyle, sliderBorderColor} = attributes;
+    const {sliderAlignment, sliderBGColor, sliderTitleColor, sliderDesColor, navigationArrowColor, paginationDotColor, enableNavigationArrows,  navigationArrowSize, sliderBorder, sliderBorderStyle, sliderBorderColor, singleSlideBorderColor, singleSlideBorderStyle, singleSlideBorder, singleSlideMargin, singleSlidePadding} = attributes;
 
     const onChangeSliderBorder = (newValue) => {
         setAttributes({sliderBorder: newValue});
     }
+    const onChangeSingleSlideBorder = (newValue) => {
+        setAttributes({singleSlideBorder: newValue});
+    }
+
+    const onChangeSingleSlideMargin = (newValue) => {
+        setAttributes({singleSlideMargin: newValue});
+    }
+    const onChangeSingleSlidePadding = (newValue) => {
+        setAttributes({singleSlidePadding: newValue});
+        console.log(newValue);
+    }
+
     return(
         <>
         <PanelBody title={ __( 'Content', 'mrs-logo-carousel' ) } initialOpen={ false }>
@@ -21,10 +33,9 @@ const StyleTab = ({attributes, setAttributes}) => {
 
                 <Button className={`mrs-logo-carousel-vertical-align ${('Right' == sliderAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({sliderAlignment: 'Right'})}>Right</Button>
             </ButtonGroup>
-        </PanelBody>
-        <PanelBody title={__('Slider Settings', 'mrs-log-carousel')} initialOpen={false} className='mrs-logo-carousel-style-tab-panel-slider'>
-            <p>{__('Slider Color Settings', 'mrs-logo-carousel')}</p>
+            <Divider />
             <PanelColorSettings
+                title={__('Content Color Settings', 'mrs-logo-carousel')}
                 disableCustomColors={false}
                 colorSettings={[
                     {
@@ -50,7 +61,9 @@ const StyleTab = ({attributes, setAttributes}) => {
                     }
                 ]}
             />
-            <Divider />
+        </PanelBody>
+
+        <PanelBody title={__('Slider Settings', 'mrs-log-carousel')} initialOpen={false} className='mrs-logo-carousel-style-tab-panel-slider'>
             <PanelColorSettings
                 title={__('Slider Border Color', 'mrs-logo-carousel')}
                 disableCustomColors={false}
@@ -86,6 +99,54 @@ const StyleTab = ({attributes, setAttributes}) => {
             />
             
         </PanelBody>
+
+        <PanelBody title={__('Single Slide Settings', 'mrs-log-carousel')} initialOpen={false} className='mrs-logo-carousel-style-tab-panel-slider'>
+            <PanelColorSettings
+                title={__('Slider Border Color', 'mrs-logo-carousel')}
+                disableCustomColors={false}
+                colorSettings={[
+                    {
+                        label: __('Single Slide Border Color', 'mrs-logo-carousel'),
+                        value: singleSlideBorderColor,
+                        onChange: (value) => {
+                            setAttributes({ singleSlideBorderColor: value });
+                        }
+                    }
+                ]}
+            />
+            <SelectControl
+                label={__('Single Slide Border Style', 'mrs-logo-carousel')}
+                options={[
+                    {  label: 'None', value: 'none'},
+                    { label: 'Solid', value: 'solid' },
+                    { label: 'Dashed', value: 'dashed' },
+                    { label: 'Dotted', value: 'dotted' },
+                    { label: 'Double', value: 'double' },
+                    { label: 'Groove', value: 'groove' },
+                    { label: 'Inset', value: 'inset' },
+                    { label: 'Outset', value: 'outset' }
+                ]}
+                value={singleSlideBorderStyle}
+                onChange={(value) => setAttributes({singleSlideBorderStyle: value})}
+            />
+            <BoxControl
+                label={__('Single Slide Border Settings', 'mrs-logo-carousel')}
+                values={singleSlideBorder}
+                onChange={onChangeSingleSlideBorder}
+            />
+            <Divider />
+            <BoxControl
+                    label={__('Single Slide Margin', 'mrs-logo-carousel')}
+                    values={singleSlideMargin}
+                    onChange={onChangeSingleSlideMargin}
+                />
+                <BoxControl
+                    label={__('Single Slide Padding', 'mrs-logo-carousel')}
+                    values={singleSlidePadding}
+                    onChange={onChangeSingleSlidePadding}
+                />        
+        </PanelBody>
+
         <PanelBody title={__('Navigation Settings', 'mrs-log-carousel')} initialOpen={false}>
             <PanelColorSettings
                 disableCustomColors={false}
