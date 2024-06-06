@@ -14,11 +14,15 @@ jQuery(document).ready(function() {
   var autoPlaySpeedBool = attributesData.slice(autoPlaySpeed + 15, autoPlaySpeed + 20);
   var paginationDotColor = attributesData.search('paginationDotColor');
   var paginationDotColorString = attributesData.slice(paginationDotColor + 22, paginationDotColor + 28);
+  var navigationArrowColor = attributesData.search('navigationArrowColor');
+  var navigationArrowColorString = attributesData.slice(navigationArrowColor + 24, navigationArrowColor + 30);
+  var navigationArrowSize = attributesData.search('navigationArrowSize');
+  var navigationArrowSizeString = attributesData.slice(navigationArrowSize + 21, navigationArrowSize + 24);
 
 
 
-  console.log(paginationDotColor);
-  console.log(paginationDotColorString);
+  console.log(navigationArrowSize);
+  console.log(navigationArrowSizeString);
 
 
   var script = document.createElement('script');
@@ -50,15 +54,19 @@ jQuery(document).ready(function() {
       })();
   `;
 
-    var style = document.createElement('style');
-    style.type = 'text/style';
-    style.text = (function(){
-      `background: #${paginationDotColorString};`
-    })()
-
-    jQuery('.swiper-pagination-bullet').append(style)
-
-
   document.body.appendChild(script);
+    
+  jQuery('.swiper-pagination .swiper-pagination-bullet').css('background-color', `#${paginationDotColorString}`);
+
+  //Navigation Arrow;
+  var styleElement = jQuery('style#dynamic-style');
+  if(styleElement.length === 0) {
+    styleElement = jQuery('<style id="dynamic-style"></style');
+    var navArrowStyle = jQuery('.swiper-button-next').prev('style');
+    jQuery(navArrowStyle).append(styleElement);
+  };
+  styleElement.append(`.swiper-button-prev::after, .swiper-button-next::after {color: #${navigationArrowColorString}; font-size: ${parseInt(navigationArrowSizeString)}px}`);
+
+
 
 })(jQuery);

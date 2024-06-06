@@ -13,10 +13,10 @@ const AdvanceTab = ({attributes, setAttributes}) => {
     const onChangeSliderPadding = (value) => {
         setAttributes({ sliderPadding: value });
     }
-    console.log(sliderMargin);
+    
     return(
         <>
-            <PanelBody title={ __( 'Spacing', 'mrs-logo-carousel' ) } initialOpen={ true }>
+            <PanelBody title={ __( 'Spacing', 'mrs-logo-carousel' ) } initialOpen={ true } className='mrs-logo-carousel-advance-tab-panel'>
                 <BoxControl
                     label={__('Margin', 'mrs-logo-carousel')}
                     values={sliderMargin}

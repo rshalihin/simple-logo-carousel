@@ -141,6 +141,10 @@
 			"type": "string",
             "default": ""
 		},
+		"navigationArrowSize": {
+			"type": "number",
+            "default": 30
+		},
 		"paginationDotColor": {
 			"type": "string",
             "default": ""
@@ -164,6 +168,18 @@
 		"sliderPadding": {
 			"type": "object",
             "default": { "top": "0", "left": "0", "bottom": "0", "right": "0" }
+		},
+		"sliderBorder": {
+			"type": "object",
+			"default": { "top": "0", "left": "0", "bottom": "0", "right": "0" }
+		},
+		"sliderBorderStyle": {
+			"type": "string",
+            "default": "none"
+		},
+		"sliderBorderColor": {
+			"type": "string",
+            "default": ""
 		}
 	},
 	"textdomain": "mrs-logo-carousel",

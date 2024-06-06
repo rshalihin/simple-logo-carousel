@@ -23,7 +23,7 @@ import './editor.scss';
 let firstTimeLoad = true;
 
 export default function Edit({ attributes, setAttributes, clientId, isSelected }) {
-	const { uniqueId, enableNavigationArrows, enablePaginationDots, slidePerView, slideSpaceBetween, infiniteLoop, autoPlay, pauseOn, autoPlaySpeed, sliderId, sliderAlignment, sliderTitle, sliderDescription, sliderLogoImage, verticalAlignment, sliderBGColor, desktopHide, tabletHide, mobileHide, sliderMargin, sliderPadding } = attributes;
+	const { uniqueId, enableNavigationArrows, enablePaginationDots, slidePerView, slideSpaceBetween, infiniteLoop, autoPlay, pauseOn, autoPlaySpeed, sliderId, sliderAlignment, sliderTitle, sliderDescription, sliderLogoImage, sliderBGColor, desktopHide, tabletHide, mobileHide, sliderMargin, sliderPadding, sliderBorder, sliderBorderStyle, sliderBorderColor } = attributes;
 
 	const [ onLoad, setOnLoad ] = useState(false);
 
@@ -94,11 +94,12 @@ export default function Edit({ attributes, setAttributes, clientId, isSelected }
 				label={__('Add Slide', 'mrs-logo-carousel')}
 			/>
 		</BlockControls>
-		<div { ...useBlockProps() }>
-
+		<div { ...useBlockProps({
+			style: { borderTop: `${sliderBorder.top} ${sliderBorderStyle} ${sliderBorderColor}`, borderBottom: `${sliderBorder.bottom} ${sliderBorderStyle} ${sliderBorderColor}`, borderRight: `${sliderBorder.right} ${sliderBorderStyle} ${sliderBorderColor}`, borderLeft: `${sliderBorder.left} ${sliderBorderStyle} ${sliderBorderColor}`}
+		}) }>
 			<div className={`mrs-logo-carousel-wrapper ${desktopHide ? 'hide-desktop' : ''}${tabletHide ? ' hide-tablet' : ''}${mobileHide ? ' hide-mobile' : ''}`} style={{background: sliderBGColor}}>
 
-				<div className={'mrs-logo-carousel'} style={{marginTop: `${sliderMargin.top}px`, marginBottom: `${sliderMargin.bottom}px`, marginLeft: `${sliderMargin.left}px`, marginRight: `${sliderMargin.right}px`, paddingTop: `${sliderPadding.top}px`, paddingBottom: `${sliderPadding.bottom}px`, paddingRight: `${sliderPadding.right}px`, paddingLeft: `${sliderPadding.left}px`}}>
+				<div className={'mrs-logo-carousel'} style={{marginTop: `${sliderMargin.top}`, marginBottom: `${sliderMargin.bottom}`, marginLeft: `${sliderMargin.left}`, marginRight: `${sliderMargin.right}`, paddingTop: `${sliderPadding.top}`, paddingBottom: `${sliderPadding.bottom}`, paddingRight: `${sliderPadding.right}`, paddingLeft: `${sliderPadding.left}`}}>
 
 				<Swiper
 					slidesPerView={slidePerView}
