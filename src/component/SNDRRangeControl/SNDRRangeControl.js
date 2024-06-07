@@ -1,9 +1,9 @@
 import { __ } from '@wordpress/i18n';
 import { RangeControl } from '@wordpress/components';
 
-import './RSRangeControl.scss';
+import './SNDRRangeControl.scss';
 
-const RSRangeControl = ({label, attributes, attributesKey, setAttributes, min ='', max=''}) => {
+const SNDRRangeControl = ({label, attributes, attributesKey, setAttributes, min ='', max=''}) => {
     return (
         <>
             <div className="mrs-box-control mrs-component-mb">
@@ -19,4 +19,4 @@ const RSRangeControl = ({label, attributes, attributesKey, setAttributes, min ='
     )
 }
 
-export default RSRangeControl;
+export default SNDRRangeControl;

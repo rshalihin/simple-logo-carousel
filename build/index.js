@@ -131,20 +131,20 @@ const RSSlider = ({
   };
   const onSelectImageURL = media => {};
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: 'mrs-logo-carousel-swiper-slider-content-wrapper',
+    className: 'sndr-logo-carousel-swiper-slider-content-wrapper',
     style: {
       textAlign: sliderAlignment
     }
   }, logoPosition === 'above' && enableTitle && sliderTitle?.map((slide, i) => {
     if (parseInt(slide.id) === parseInt(dataId)) {
       return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: "mrs-logo-carousel-swiper-slider-title"
+        className: "sndr-logo-carousel-swiper-slider-title"
       }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
         tagName: titleTag,
         style: {
           color: sliderTitleColor
         },
-        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Title', 'mrs-logo-slider'),
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Title', 'sndr-logo-slider'),
         value: slide.title,
         onChange: value => onChangeLogoTitle(slide.id, value)
       }));
@@ -153,7 +153,7 @@ const RSSlider = ({
     if (parseInt(item.id) === parseInt(dataId)) {
       if (!item.url) {
         return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-          className: 'mrs-logo-carousel-swiper-slider-image'
+          className: 'sndr-logo-carousel-swiper-slider-image'
         }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaPlaceholder, {
           icon: "admin-users",
           allowedTypes: ['image'],
@@ -164,7 +164,7 @@ const RSSlider = ({
         }));
       } else {
         return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-          className: 'mrs-logo-carousel-swiper-slider-image'
+          className: 'sndr-logo-carousel-swiper-slider-image'
         }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
           src: item.url,
           alt: item.alt,
@@ -175,13 +175,13 @@ const RSSlider = ({
   }), logoPosition === 'below' && enableTitle && sliderTitle?.map((slide, i) => {
     if (parseInt(slide.id) === parseInt(dataId)) {
       return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: "mrs-logo-carousel-swiper-slider-title"
+        className: "sndr-logo-carousel-swiper-slider-title"
       }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
         tagName: titleTag,
         style: {
           color: sliderTitleColor
         },
-        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Title', 'mrs-logo-slider'),
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Title', 'sndr-logo-slider'),
         value: slide.title,
         onChange: value => onChangeLogoTitle(slide.id, value)
       }));
@@ -189,13 +189,13 @@ const RSSlider = ({
   }), enableDescription && sliderDescription?.map((item, i) => {
     if (parseInt(item.id) === parseInt(dataId)) {
       return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: "mrs-logo-carousel-slide-des",
+        className: "sndr-logo-carousel-slide-des",
         style: {
           color: sliderDesColor
         }
       }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
         tagName: descriptionTag,
-        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Description', 'mrs-logo-slider'),
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Description', 'sndr-logo-slider'),
         value: item.description,
         onChange: value => onChangeLogoDescription(item.id, value)
       }));
@@ -250,32 +250,32 @@ const AdvanceTab = ({
     });
   };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Spacing', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Spacing', 'sndr-logo-carousel'),
     initialOpen: true,
-    className: "mrs-logo-carousel-advance-tab-panel"
+    className: "sndr-logo-carousel-advance-tab-panel"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalBoxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Margin', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Margin', 'sndr-logo-carousel'),
     values: sliderMargin,
     onChange: onChangeSliderMargin
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalBoxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Padding', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Padding', 'sndr-logo-carousel'),
     values: sliderPadding,
     onChange: onChangeSliderPadding
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Responsive', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Responsive', 'sndr-logo-carousel'),
     initialOpen: true
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_toggle_toggle__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Hide on Desktop', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Hide on Desktop', 'sndr-logo-carousel'),
     attributes: desktopHide,
     attributesKey: 'desktopHide',
     setAttributes: setAttributes
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_toggle_toggle__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Hide on Tablet', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Hide on Tablet', 'sndr-logo-carousel'),
     attributes: tabletHide,
     attributesKey: 'tabletHide',
     setAttributes: setAttributes
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_toggle_toggle__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Hide on Mobile', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Hide on Mobile', 'sndr-logo-carousel'),
     attributes: mobileHide,
     attributesKey: 'mobileHide',
     setAttributes: setAttributes
@@ -285,10 +285,10 @@ const AdvanceTab = ({
 
 /***/ }),
 
-/***/ "./src/component/RSRangeControl/RSRangeControl.js":
-/*!********************************************************!*\
-  !*** ./src/component/RSRangeControl/RSRangeControl.js ***!
-  \********************************************************/
+/***/ "./src/component/SNDRRangeControl/SNDRRangeControl.js":
+/*!************************************************************!*\
+  !*** ./src/component/SNDRRangeControl/SNDRRangeControl.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -301,12 +301,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _RSRangeControl_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RSRangeControl.scss */ "./src/component/RSRangeControl/RSRangeControl.scss");
+/* harmony import */ var _SNDRRangeControl_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SNDRRangeControl.scss */ "./src/component/SNDRRangeControl/SNDRRangeControl.scss");
 
 
 
 
-const RSRangeControl = ({
+const SNDRRangeControl = ({
   label,
   attributes,
   attributesKey,
@@ -326,14 +326,14 @@ const RSRangeControl = ({
     })
   })));
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RSRangeControl);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SNDRRangeControl);
 
 /***/ }),
 
-/***/ "./src/component/mrsPanel/MRSPanel.js":
-/*!********************************************!*\
-  !*** ./src/component/mrsPanel/MRSPanel.js ***!
-  \********************************************/
+/***/ "./src/component/sndrPanel/SNDRPanel.js":
+/*!**********************************************!*\
+  !*** ./src/component/sndrPanel/SNDRPanel.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -348,13 +348,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _MRSPanel_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MRSPanel.scss */ "./src/component/mrsPanel/MRSPanel.scss");
+/* harmony import */ var _sndrPanel_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sndrPanel.scss */ "./src/component/sndrPanel/sndrPanel.scss");
 
 
 
 
 
-const MRSPanel = ({
+const sndrPanel = ({
   title,
   open,
   data = '',
@@ -450,14 +450,14 @@ const MRSPanel = ({
     });
   };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mrs-logo-carousel-single-slide-sidebar-tab"
+    className: "sndr-logo-carousel-single-slide-sidebar-tab"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
     title: title,
     initialOpen: open
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: 'mrs-logo-carousel-single-slide-sidebar-tab-content'
+    className: 'sndr-logo-carousel-single-slide-sidebar-tab-content'
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", null, "Image"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mrs-media-control__wrapper",
+    className: "sndr-media-control__wrapper",
     style: {
       backgroundImage: `url("${LogoBackgroundImage(data)}")`,
       backgroundPosition: 'center',
@@ -465,7 +465,7 @@ const MRSPanel = ({
       marginTop: '10px'
     }
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mrs-media-control__footer"
+    className: "sndr-media-control__footer"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
     onSelect: media => onClickImageChange(media, data),
     allowedTypes: ['image'],
@@ -479,32 +479,32 @@ const MRSPanel = ({
       }
     }, "Change Image")
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mrs-media-control__clickable"
+    className: "sndr-media-control__clickable"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    className: "mrs-media-control__button--close",
+    className: "sndr-media-control__button--close",
     icon: "no",
     onClick: () => deleteSlideLogoImage(data)
   })))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Title', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Title', 'sndr-logo-carousel'),
     value: sliderTitle?.find(t => t.id === data).title,
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Title', 'mrs-logo-carousel'),
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Title', 'sndr-logo-carousel'),
     onChange: newTitle => {
       onChangeLogoTitles(data, newTitle);
     }
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextareaControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Description', 'mrs-logo-carousel'),
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Description', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Description', 'sndr-logo-carousel'),
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Description', 'sndr-logo-carousel'),
     value: sliderDescription?.find(t => t.id === data).description,
     onChange: newDes => {
       onChangeLogoDescription(data, newDes);
     }
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     icon: "no",
-    className: "mrs-logo-carousel-single-slide-sidebar-tab-close-button",
+    className: "sndr-logo-carousel-single-slide-sidebar-tab-close-button",
     onClick: () => deleteSlide(data)
   })));
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MRSPanel);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sndrPanel);
 
 /***/ }),
 
@@ -602,31 +602,31 @@ const TabControls = ({
     Tabs.push({
       name: 'general',
       title: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-        className: "mrs-tab-panel-title"
+        className: "sndr-tab-panel-title"
       }, (0,_svgIcon_svgIcon__WEBPACK_IMPORTED_MODULE_2__.GeneralIcon)(), " General"),
-      className: 'mrs-general-tab'
+      className: 'sndr-general-tab'
     });
   }
   if (StyleTab) {
     Tabs.push({
       name: 'style',
       title: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-        className: "mrs-tab-panel-title"
+        className: "sndr-tab-panel-title"
       }, " ", (0,_svgIcon_svgIcon__WEBPACK_IMPORTED_MODULE_2__.StyleIcon)(), " Style"),
-      className: 'mrs-style-tab'
+      className: 'sndr-style-tab'
     });
   }
   if (AdvancedTab) {
     Tabs.push({
       name: 'advanced',
       title: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-        className: "mrs-tab-panel-title"
+        className: "sndr-tab-panel-title"
       }, (0,_svgIcon_svgIcon__WEBPACK_IMPORTED_MODULE_2__.AdvancedIcon)(), " Advanced"),
-      className: 'mrs-advanced-tab'
+      className: 'sndr-advanced-tab'
     });
   }
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TabPanel, {
-    className: "mrs-tab-panel",
+    className: "sndr-tab-panel",
     activeClass: "active-tab",
     tabs: Tabs
   }, tab => {
@@ -675,7 +675,7 @@ const Toggle = ({
   setAttributes
 }) => {
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mrs-toggle mrs-component-mb"
+    className: "sndr-toggle sndr-component-mb"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
     label: label,
     checked: attributes,
@@ -685,6 +685,145 @@ const Toggle = ({
   })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Toggle);
+
+/***/ }),
+
+/***/ "./src/controls/controls.js":
+/*!**********************************!*\
+  !*** ./src/controls/controls.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   cssString: () => (/* binding */ cssString)
+/* harmony export */ });
+const cssString = css => {
+  let results = '';
+  for (const selector in css) {
+    let cssProps = '';
+    for (const property in css[selector]) {
+      if (css[selector][property] && css[selector][property].length > 0) {
+        cssProps += property + ':' + css[selector][property] + ';';
+      }
+    }
+    results += '' !== cssProps ? selector + '{' + cssProps + '}' : '';
+  }
+  return results;
+};
+
+/***/ }),
+
+/***/ "./src/dynamicCss.js":
+/*!***************************!*\
+  !*** ./src/dynamicCss.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _controls_controls__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controls/controls */ "./src/controls/controls.js");
+
+const dynamicCss = attributes => {
+  const {
+    uniqueId,
+    titleTag,
+    sliderBorder,
+    sliderBorderStyle,
+    sliderBorderColor,
+    sliderBGColor,
+    sliderMargin,
+    sliderPadding,
+    singleSlideBorder,
+    singleSlideMargin,
+    singleSlidePadding,
+    singleSlideBorderStyle,
+    singleSlideBorderColor,
+    paginationDotColor,
+    navigationArrowColor,
+    navigationArrowSize,
+    contentAlignment
+  } = attributes;
+  let desktopCss = {
+    [`.sndr-logo-carousel-${uniqueId} .sndr-logo-carousel-wrapper .sndr-logo-carousel .swiper`]: {
+      'width': '100%',
+      'height': '100%'
+    },
+    [`.sndr-logo-carousel-${uniqueId} .swiper-wrapper .swiper-slide`]: {
+      'text-align': 'center',
+      'display': 'flex',
+      'justify-content': 'center',
+      'align-items': 'center'
+    },
+    [`.sndr-logo-carousel-${uniqueId} .swiper-slide .sndr-logo-carousel-swiper-slider-content-wrapper`]: {
+      'margin-bottom': '30px'
+    },
+    [`.sndr-logo-carousel-${uniqueId} .sndr-logo-carousel-swiper-slider-image img`]: {
+      'display': 'block',
+      'width': '100%',
+      'height': '100%',
+      'object-fit': 'cover'
+    },
+    [`.sndr-logo-carousel-${uniqueId} .sndr-logo-carousel-swiper-slider-content-wrapper .sndr-logo-carousel-swiper-slider-title ${titleTag}`]: {
+      'margin': '30px 0 5px'
+    },
+    [`.sndr-logo-carousel-${uniqueId} .sndr-logo-carousel-swiper-slider-content-wrapper .sndr-logo-carousel-slide-des`]: {
+      'margin': '0 0 20px'
+    },
+    [`.sndr-logo-carousel-${uniqueId} .swiper`]: {
+      'margin-left': 'auto',
+      'margin-right': 'auto'
+    },
+    [`.sndr-logo-carousel-${uniqueId}`]: {
+      'background': sliderBGColor,
+      'border-top': `${sliderBorder.top} ${sliderBorderStyle} ${sliderBorderColor}`,
+      'border-bottom': `${sliderBorder.bottom} ${sliderBorderStyle} ${sliderBorderColor}`,
+      'border-right': `${sliderBorder.right} ${sliderBorderStyle} ${sliderBorderColor}`,
+      'border-left': `${sliderBorder.left} ${sliderBorderStyle} ${sliderBorderColor}`
+    },
+    [`.sndr-logo-carousel-${uniqueId} .sndr-logo-carousel-wrapper .sndr-logo-carousel`]: {
+      'margin-top': sliderMargin.top,
+      'margin-bottom': sliderMargin.bottom,
+      'margin-left': sliderMargin.left,
+      'margin-right': sliderMargin.right,
+      'padding-top': sliderPadding.top,
+      'padding-bottom': sliderPadding.bottom,
+      'padding-right': sliderPadding.right,
+      'padding-left': sliderPadding.left
+    },
+    [`.sndr-logo-carousel-${uniqueId} .swiper-wrapper .swiper-slide`]: {
+      'background': sliderBGColor,
+      'border-top': `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      'border-bottom': `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      'border-left': `${singleSlideBorder.left} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      'border-right': `${singleSlideBorder.right} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
+      'margin-top': singleSlideMargin.top,
+      'margin-bottom': singleSlideMargin.bottom,
+      'margin-left': singleSlideMargin.left,
+      'margin-right': singleSlideMargin.right,
+      'padding-top': singleSlidePadding.top,
+      'padding-bottom': singleSlidePadding.bottom,
+      'padding-right': singleSlidePadding.right,
+      'padding-left': singleSlidePadding.left
+    },
+    [`.sndr-logo-carousel-${uniqueId} .swiper-pagination .swiper-pagination-bullet`]: {
+      'background-color': paginationDotColor
+    },
+    [`.sndr-logo-carousel-${uniqueId} .swiper-button-prev::after, .sndr-logo-carousel-${uniqueId} .swiper-button-next::after`]: {
+      'color': navigationArrowColor,
+      'font-size': navigationArrowSize + 'px'
+    },
+    [`.sndr-logo-carousel-${uniqueId} .sndrSwiper .swiper-wrapper`]: {
+      'align-items': contentAlignment
+    }
+  };
+  desktopCss = (0,_controls_controls__WEBPACK_IMPORTED_MODULE_0__.cssString)(desktopCss);
+  const styles = `${desktopCss}`;
+  return styles;
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dynamicCss);
 
 /***/ }),
 
@@ -712,12 +851,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _Inspector__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Inspector */ "./src/Inspector.js");
 /* harmony import */ var _RSSlider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./RSSlider */ "./src/RSSlider.js");
-/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/swiper-react.mjs");
-/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
-/* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
-/* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
-/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
+/* harmony import */ var _dynamicCss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dynamicCss */ "./src/dynamicCss.js");
+/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/swiper-react.mjs");
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
+/* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
+/* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
+
 
 
 
@@ -764,16 +905,7 @@ function Edit({
     desktopHide,
     tabletHide,
     mobileHide,
-    sliderMargin,
-    sliderPadding,
-    sliderBorder,
-    sliderBorderStyle,
-    sliderBorderColor,
-    singleSlideBorder,
-    singleSlideBorderStyle,
-    singleSlideBorderColor,
-    singleSlideMargin,
-    singleSlidePadding
+    frontendCss
   } = attributes;
   const [onLoad, setOnLoad] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.useState)(false);
   const {
@@ -840,6 +972,13 @@ function Edit({
       }]
     });
   };
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_5__.useEffect)(() => {
+    setAttributes({
+      frontendCss: JSON.stringify((0,_dynamicCss__WEBPACK_IMPORTED_MODULE_8__["default"])(attributes))
+    });
+  }, [attributes]);
+
+  // console.log(uniqueId);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Inspector__WEBPACK_IMPORTED_MODULE_6__["default"], {
     attributes: attributes,
     setAttributes: setAttributes,
@@ -852,34 +991,16 @@ function Edit({
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToolbarButton, {
     onClick: () => addSlideButtonClick(),
     icon: "plus-alt",
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Add Slide', 'mrs-logo-carousel')
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Add Slide', 'sndr-logo-carousel')
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, (0,_dynamicCss__WEBPACK_IMPORTED_MODULE_8__["default"])(attributes)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-      style: {
-        borderTop: `${sliderBorder.top} ${sliderBorderStyle} ${sliderBorderColor}`,
-        borderBottom: `${sliderBorder.bottom} ${sliderBorderStyle} ${sliderBorderColor}`,
-        borderRight: `${sliderBorder.right} ${sliderBorderStyle} ${sliderBorderColor}`,
-        borderLeft: `${sliderBorder.left} ${sliderBorderStyle} ${sliderBorderColor}`
-      }
+      className: `sndr-logo-carousel-${uniqueId}`
     })
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `mrs-logo-carousel-wrapper ${desktopHide ? 'hide-desktop' : ''}${tabletHide ? ' hide-tablet' : ''}${mobileHide ? ' hide-mobile' : ''}`,
-    style: {
-      background: sliderBGColor
-    }
+    className: `sndr-logo-carousel-wrapper ${desktopHide ? 'hide-desktop' : ''}${tabletHide ? ' hide-tablet' : ''}${mobileHide ? ' hide-mobile' : ''}`
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: 'mrs-logo-carousel',
-    style: {
-      marginTop: `${sliderMargin.top}`,
-      marginBottom: `${sliderMargin.bottom}`,
-      marginLeft: `${sliderMargin.left}`,
-      marginRight: `${sliderMargin.right}`,
-      paddingTop: `${sliderPadding.top}`,
-      paddingBottom: `${sliderPadding.bottom}`,
-      paddingRight: `${sliderPadding.right}`,
-      paddingLeft: `${sliderPadding.left}`
-    }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(swiper_react__WEBPACK_IMPORTED_MODULE_8__.Swiper, {
+    className: 'sndr-logo-carousel'
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(swiper_react__WEBPACK_IMPORTED_MODULE_9__.Swiper, {
     slidesPerView: slidePerView,
     spaceBetween: slideSpaceBetween,
     loop: infiniteLoop,
@@ -892,25 +1013,9 @@ function Edit({
       clickable: true
     } : false,
     navigation: enableNavigationArrows,
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_12__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_12__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_12__.Navigation],
-    className: "mrsSwiper"
-  }, sliderId?.map((slideId, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(swiper_react__WEBPACK_IMPORTED_MODULE_8__.SwiperSlide, {
-    style: {
-      background: sliderBGColor,
-      borderTop: `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-      borderBottom: `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-      borderRight: `${singleSlideBorder.right} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-      borderLeft: `${singleSlideBorder.left} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-      marginTop: `${singleSlideMargin.top}`,
-      marginBottom: `${singleSlideMargin.bottom}`,
-      marginLeft: `${singleSlideMargin.left}`,
-      marginRight: `${singleSlideMargin.right}`,
-      paddingTop: `${singleSlidePadding.top}`,
-      paddingBottom: `${singleSlidePadding.bottom}`,
-      paddingRight: `${singleSlidePadding.right}`,
-      paddingLeft: `${singleSlidePadding.left}`
-    }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RSSlider__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_13__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_13__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_13__.Navigation],
+    className: "sndrSwiper"
+  }, sliderId?.map((slideId, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(swiper_react__WEBPACK_IMPORTED_MODULE_9__.SwiperSlide, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_RSSlider__WEBPACK_IMPORTED_MODULE_7__["default"], {
     key: i,
     dataId: slideId.id,
     attributes: attributes,
@@ -939,8 +1044,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _component_toggle_toggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/toggle/toggle */ "./src/component/toggle/toggle.js");
-/* harmony import */ var _component_RSRangeControl_RSRangeControl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./component/RSRangeControl/RSRangeControl */ "./src/component/RSRangeControl/RSRangeControl.js");
-/* harmony import */ var _component_mrsPanel_MRSPanel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./component/mrsPanel/MRSPanel */ "./src/component/mrsPanel/MRSPanel.js");
+/* harmony import */ var _component_SNDRRangeControl_SNDRRangeControl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./component/SNDRRangeControl/SNDRRangeControl */ "./src/component/SNDRRangeControl/SNDRRangeControl.js");
+/* harmony import */ var _component_sndrPanel_SNDRPanel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./component/sndrPanel/SNDRPanel */ "./src/component/sndrPanel/SNDRPanel.js");
 
 
 
@@ -972,36 +1077,36 @@ const GeneralTab = ({
   const htmlTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
   const desHtmlTags = ['h4', 'h5', 'h6', 'p', 'span', 'div'];
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider', 'sndr-logo-carousel'),
     initialOpen: true
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_RSRangeControl_RSRangeControl__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slide per View', 'mrs-logo-carousel'),
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_SNDRRangeControl_SNDRRangeControl__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slide per View', 'sndr-logo-carousel'),
     min: 1,
     max: 10,
     attributes: slidePerView,
     attributesKey: 'slidePerView',
     setAttributes: setAttributes
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_toggle_toggle__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Autoplay', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Autoplay', 'sndr-logo-carousel'),
     attributes: autoPlay,
     attributesKey: 'autoPlay',
     setAttributes: setAttributes
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_RSRangeControl_RSRangeControl__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Space between Slide', 'mrs-logo-carousel'),
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_SNDRRangeControl_SNDRRangeControl__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Space between Slide', 'sndr-logo-carousel'),
     min: 0,
     max: 200,
     attributes: slideSpaceBetween,
     attributesKey: 'slideSpaceBetween',
     setAttributes: setAttributes
-  }), autoPlay && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_RSRangeControl_RSRangeControl__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Autoplay Speed (ms)', 'mrs-logo-carousel'),
+  }), autoPlay && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_SNDRRangeControl_SNDRRangeControl__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Autoplay Speed (ms)', 'sndr-logo-carousel'),
     min: 0,
     max: 10000,
     attributes: autoPlaySpeed,
     attributesKey: 'autoPlaySpeed',
     setAttributes: setAttributes
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_toggle_toggle__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Infinite Loop', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Infinite Loop', 'sndr-logo-carousel'),
     attributes: infiniteLoop,
     attributesKey: 'infiniteLoop',
     setAttributes: setAttributes
@@ -1011,54 +1116,54 @@ const GeneralTab = ({
       marginTop: '10px'
     }
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    className: `mrs-logo-carousel-pause-on ${'Hover' == pauseOn ? 'active' : ''}`,
+    className: `sndr-logo-carousel-pause-on ${'Hover' == pauseOn ? 'active' : ''}`,
     onClick: () => setAttributes({
       pauseOn: 'Hover'
     })
   }, "Hover"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    className: `mrs-logo-carousel-pause-on ${'Interaction' == pauseOn ? 'active' : ''}`,
+    className: `sndr-logo-carousel-pause-on ${'Interaction' == pauseOn ? 'active' : ''}`,
     onClick: () => setAttributes({
       pauseOn: 'Interaction'
     })
   }, "Interaction"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-    className: `mrs-logo-carousel-pause-on ${'None' == pauseOn ? 'active' : ''}`,
+    className: `sndr-logo-carousel-pause-on ${'None' == pauseOn ? 'active' : ''}`,
     onClick: () => setAttributes({
       pauseOn: 'None'
     })
   }, "None")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slide', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slide', 'sndr-logo-carousel'),
     initialOpen: false
   }, sliderId?.map((item, i) => {
-    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_mrsPanel_MRSPanel__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${item.id} Slide`, 'mrs-logo-carousel'),
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_sndrPanel_SNDRPanel__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${item.id} Slide`, 'sndr-logo-carousel'),
       open: false,
       data: item.id,
       attributes: attributes,
       setAttributes: setAttributes
     }));
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "mrs-logo-carousel-add-single-slide-sidebar-tab"
+    className: "sndr-logo-carousel-add-single-slide-sidebar-tab"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     icon: "plus",
     onClick: addSlide
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Navigation', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Navigation', 'sndr-logo-carousel'),
     initialOpen: false
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_toggle_toggle__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Show Navigation Arrow', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Show Navigation Arrow', 'sndr-logo-carousel'),
     attributes: enableNavigationArrows,
     attributesKey: 'enableNavigationArrows',
     setAttributes: setAttributes
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_toggle_toggle__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Show Pagination Dots', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Show Pagination Dots', 'sndr-logo-carousel'),
     attributes: enablePaginationDots,
     attributesKey: 'enablePaginationDots',
     setAttributes: setAttributes
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Settings', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Logo Settings', 'sndr-logo-carousel'),
     initialOpen: false
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Logo Position', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Logo Position', 'sndr-logo-carousel'),
     options: [{
       label: 'Above Title',
       value: 'above'
@@ -1071,10 +1176,10 @@ const GeneralTab = ({
       logoPosition: newPosition
     })
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Title', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Title', 'sndr-logo-carousel'),
     initialOpen: false
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_toggle_toggle__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enable Title', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enable Title', 'sndr-logo-carousel'),
     attributes: enableTitle,
     attributesKey: 'enableTitle',
     setAttributes: setAttributes
@@ -1085,15 +1190,15 @@ const GeneralTab = ({
     }
   }, htmlTags?.map((tag, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     key: i,
-    className: `mrs-logo-carousel-title-tag ${tag == titleTag ? 'active' : ''}`,
+    className: `sndr-logo-carousel-title-tag ${tag == titleTag ? 'active' : ''}`,
     onClick: () => setAttributes({
       titleTag: tag
     })
   }, tag))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Description', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Description', 'sndr-logo-carousel'),
     initialOpen: false
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_toggle_toggle__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enable Description', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enable Description', 'sndr-logo-carousel'),
     attributes: enableDescription,
     attributesKey: 'enableDescription',
     setAttributes: setAttributes
@@ -1104,7 +1209,7 @@ const GeneralTab = ({
     }
   }, desHtmlTags?.map((tag, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
     key: i,
-    className: `mrs-logo-carousel-title-tag ${tag == descriptionTag ? 'active' : ''}`,
+    className: `sndr-logo-carousel-title-tag ${tag == descriptionTag ? 'active' : ''}`,
     onClick: () => setAttributes({
       descriptionTag: tag
     })
@@ -1164,7 +1269,6 @@ function save({
     desktopHide,
     tabletHide,
     mobileHide,
-    sliderBGColor,
     sliderId,
     sliderAlignment,
     logoPosition,
@@ -1177,77 +1281,47 @@ function save({
     sliderDescription,
     sliderDesColor,
     descriptionTag,
-    sliderMargin,
-    sliderPadding,
     enableNavigationArrows,
     enablePaginationDots,
-    sliderBorder,
-    sliderBorderStyle,
-    sliderBorderColor,
-    singleSlideBorder,
-    singleSlideBorderStyle,
-    singleSlideBorderColor,
-    singleSlideMargin,
-    singleSlidePadding
+    frontendCss,
+    uniqueId,
+    slidePerView,
+    slideSpaceBetween,
+    infiniteLoop,
+    autoPlaySpeed
   } = attributes;
-  const swiperJson = JSON.stringify(attributes);
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  const swiperVariable = {
+    slidePerView,
+    slideSpaceBetween,
+    infiniteLoop,
+    autoPlaySpeed
+  };
+  const swiperJson = JSON.stringify(swiperVariable);
+  const css = frontendCss?.substring(1, frontendCss.length - 1);
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, css), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
-      style: {
-        borderTop: `${sliderBorder.top} ${sliderBorderStyle} ${sliderBorderColor}`,
-        borderBottom: `${sliderBorder.bottom} ${sliderBorderStyle} ${sliderBorderColor}`,
-        borderRight: `${sliderBorder.right} ${sliderBorderStyle} ${sliderBorderColor}`,
-        borderLeft: `${sliderBorder.left} ${sliderBorderStyle} ${sliderBorderColor}`
-      }
+      className: `sndr-logo-carousel-${uniqueId}`
     })
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `mrs-logo-carousel-wrapper ${desktopHide ? 'hide-desktop' : ''}${tabletHide ? ' hide-tablet' : ''}${mobileHide ? ' hide-mobile' : ''}`,
-    style: {
-      background: sliderBGColor
-    }
+    className: `sndr-logo-carousel-wrapper ${desktopHide ? 'hide-desktop' : ''}${tabletHide ? ' hide-tablet' : ''}${mobileHide ? ' hide-mobile' : ''}`
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: 'mrs-logo-carousel',
-    style: {
-      marginTop: `${sliderMargin.top}`,
-      marginBottom: `${sliderMargin.bottom}`,
-      marginLeft: `${sliderMargin.left}`,
-      marginRight: `${sliderMargin.right}`,
-      paddingTop: `${sliderPadding.top}`,
-      paddingBottom: `${sliderPadding.bottom}`,
-      paddingRight: `${sliderPadding.right}`,
-      paddingLeft: `${sliderPadding.left}`
-    }
+    className: 'sndr-logo-carousel'
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "swiper mrsSwiper"
+    className: "swiper sndrSwiper"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "swiper-wrapper"
   }, sliderId?.map((slideId, i) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "swiper-slide",
-    style: {
-      background: sliderBGColor,
-      borderTop: `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-      borderBottom: `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-      borderRight: `${singleSlideBorder.right} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-      borderLeft: `${singleSlideBorder.left} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-      marginTop: `${singleSlideMargin.top}`,
-      marginBottom: `${singleSlideMargin.bottom}`,
-      marginLeft: `${singleSlideMargin.left}`,
-      marginRight: `${singleSlideMargin.right}`,
-      paddingTop: `${singleSlidePadding.top}`,
-      paddingBottom: `${singleSlidePadding.bottom}`,
-      paddingRight: `${singleSlidePadding.right}`,
-      paddingLeft: `${singleSlidePadding.left}`
-    }
+    className: "swiper-slide"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     key: i,
-    className: 'mrs-logo-carousel-swiper-slider-content-wrapper',
+    className: 'sndr-logo-carousel-swiper-slider-content-wrapper',
     style: {
       textAlign: sliderAlignment
     }
   }, logoPosition === 'above' && enableTitle && sliderTitle?.map((slide, i) => {
     if (parseInt(slide.id) === parseInt(slideId.id)) {
       return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: "mrs-logo-carousel-swiper-slider-title"
+        className: "sndr-logo-carousel-swiper-slider-title"
       }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
         tagName: titleTag,
         style: {
@@ -1260,7 +1334,7 @@ function save({
     if (parseInt(item.id) === parseInt(slideId.id)) {
       if (item.url) {
         return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-          className: 'mrs-logo-carousel-swiper-slider-image'
+          className: 'sndr-logo-carousel-swiper-slider-image'
         }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
           src: item.url,
           alt: item.alt,
@@ -1271,7 +1345,7 @@ function save({
   }), logoPosition === 'below' && enableTitle && sliderTitle?.map((slide, i) => {
     if (parseInt(slide.id) === parseInt(slideId.id)) {
       return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: "mrs-logo-carousel-swiper-slider-title"
+        className: "sndr-logo-carousel-swiper-slider-title"
       }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
         tagName: titleTag,
         style: {
@@ -1283,7 +1357,7 @@ function save({
   }), enableDescription && sliderDescription?.map((item, i) => {
     if (parseInt(item.id) === parseInt(slideId.id)) {
       return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-        className: "mrs-logo-carousel-slide-des",
+        className: "sndr-logo-carousel-slide-des",
         style: {
           color: sliderDesColor
         }
@@ -1305,7 +1379,7 @@ function save({
   })), enablePaginationDots && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     class: "swiper-pagination"
   }))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    class: "mrs-logo-carousel-data-attributes",
+    class: "sndr-logo-carousel-data-attributes",
     "data-attributes": swiperJson
   }));
 }
@@ -1330,7 +1404,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _component_RSRangeControl_RSRangeControl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/RSRangeControl/RSRangeControl */ "./src/component/RSRangeControl/RSRangeControl.js");
+/* harmony import */ var _component_SNDRRangeControl_SNDRRangeControl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/SNDRRangeControl/SNDRRangeControl */ "./src/component/SNDRRangeControl/SNDRRangeControl.js");
 
 
 
@@ -1356,7 +1430,8 @@ const StyleTab = ({
     singleSlideBorderStyle,
     singleSlideBorder,
     singleSlideMargin,
-    singleSlidePadding
+    singleSlidePadding,
+    contentAlignment
   } = attributes;
   const onChangeSliderBorder = newValue => {
     setAttributes({
@@ -1380,30 +1455,47 @@ const StyleTab = ({
     console.log(newValue);
   };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Content', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Content', 'sndr-logo-carousel'),
     initialOpen: false
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Text Alignment"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ButtonGroup, {
-    className: "mrs-logo-carousel-vertical-align-group"
+    className: "sndr-logo-carousel-vertical-align-group"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
-    className: `mrs-logo-carousel-vertical-align ${'Left' == sliderAlignment ? 'active' : ''}`,
+    className: `sndr-logo-carousel-vertical-align ${'Left' == sliderAlignment ? 'active' : ''}`,
     onClick: () => setAttributes({
       sliderAlignment: 'Left'
     })
   }, "Left"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
-    className: `mrs-logo-carousel-vertical-align ${'Center' == sliderAlignment ? 'active' : ''}`,
+    className: `sndr-logo-carousel-vertical-align ${'Center' == sliderAlignment ? 'active' : ''}`,
     onClick: () => setAttributes({
       sliderAlignment: 'Center'
     })
   }, "Center"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
-    className: `mrs-logo-carousel-vertical-align ${'Right' == sliderAlignment ? 'active' : ''}`,
+    className: `sndr-logo-carousel-vertical-align ${'Right' == sliderAlignment ? 'active' : ''}`,
     onClick: () => setAttributes({
       sliderAlignment: 'Right'
     })
-  }, "Right")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Content Color Settings', 'mrs-logo-carousel'),
+  }, "Right")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Content Alignment"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ButtonGroup, {
+    className: "sndr-logo-carousel-vertical-align-group"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+    className: `sndr-logo-carousel-vertical-align ${'Top' == contentAlignment ? 'active' : ''}`,
+    onClick: () => setAttributes({
+      contentAlignment: 'Top'
+    })
+  }, "Top"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+    className: `sndr-logo-carousel-vertical-align ${'Center' == contentAlignment ? 'active' : ''}`,
+    onClick: () => setAttributes({
+      contentAlignment: 'Center'
+    })
+  }, "Center"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Button, {
+    className: `sndr-logo-carousel-vertical-align ${'Bottom' == contentAlignment ? 'active' : ''}`,
+    onClick: () => setAttributes({
+      contentAlignment: 'Bottom'
+    })
+  }, "Bottom")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Content Color Settings', 'sndr-logo-carousel'),
     disableCustomColors: false,
     colorSettings: [{
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Title Color', 'mrs-log-carousel'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Title Color', 'sndr-log-carousel'),
       value: sliderTitleColor,
       onChange: value => {
         setAttributes({
@@ -1411,7 +1503,7 @@ const StyleTab = ({
         });
       }
     }, {
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Description Color', 'mrs-log-carousel'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Description Color', 'sndr-log-carousel'),
       value: sliderDesColor,
       onChange: value => {
         setAttributes({
@@ -1419,7 +1511,7 @@ const StyleTab = ({
         });
       }
     }, {
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Background Color', 'mrs-log-carousel'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Background Color', 'sndr-log-carousel'),
       value: sliderBGColor,
       onChange: value => {
         setAttributes({
@@ -1428,14 +1520,14 @@ const StyleTab = ({
       }
     }]
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Settings', 'mrs-log-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Settings', 'sndr-log-carousel'),
     initialOpen: false,
-    className: "mrs-logo-carousel-style-tab-panel-slider"
+    className: "sndr-logo-carousel-style-tab-panel-slider"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Color', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Color', 'sndr-logo-carousel'),
     disableCustomColors: false,
     colorSettings: [{
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Color', 'mrs-logo-carousel'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Color', 'sndr-logo-carousel'),
       value: sliderBorderColor,
       onChange: value => {
         setAttributes({
@@ -1444,7 +1536,7 @@ const StyleTab = ({
       }
     }]
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Border Style', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Border Style', 'sndr-logo-carousel'),
     options: [{
       label: 'None',
       value: 'none'
@@ -1475,18 +1567,18 @@ const StyleTab = ({
       sliderBorderStyle: value
     })
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBoxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Settings', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Settings', 'sndr-logo-carousel'),
     values: sliderBorder,
     onChange: onChangeSliderBorder
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Settings', 'mrs-log-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Settings', 'sndr-log-carousel'),
     initialOpen: false,
-    className: "mrs-logo-carousel-style-tab-panel-slider"
+    className: "sndr-logo-carousel-style-tab-panel-slider"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Color', 'mrs-logo-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Slider Border Color', 'sndr-logo-carousel'),
     disableCustomColors: false,
     colorSettings: [{
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Border Color', 'mrs-logo-carousel'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Border Color', 'sndr-logo-carousel'),
       value: singleSlideBorderColor,
       onChange: value => {
         setAttributes({
@@ -1495,7 +1587,7 @@ const StyleTab = ({
       }
     }]
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Border Style', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Border Style', 'sndr-logo-carousel'),
     options: [{
       label: 'None',
       value: 'none'
@@ -1526,24 +1618,24 @@ const StyleTab = ({
       singleSlideBorderStyle: value
     })
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBoxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Border Settings', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Border Settings', 'sndr-logo-carousel'),
     values: singleSlideBorder,
     onChange: onChangeSingleSlideBorder
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBoxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Margin', 'mrs-logo-carousel'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Margin', 'sndr-logo-carousel'),
     values: singleSlideMargin,
     onChange: onChangeSingleSlideMargin
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBoxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Padding', 'mrs-logo-carousel'),
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBoxControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Single Slide Padding', 'sndr-logo-carousel'),
     values: singleSlidePadding,
     onChange: onChangeSingleSlidePadding
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Navigation Settings', 'mrs-log-carousel'),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Navigation Settings', 'sndr-log-carousel'),
     initialOpen: false
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PanelColorSettings, {
     disableCustomColors: false,
     colorSettings: [{
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Navigation Arrow Color', 'mrs-log-carousel'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Navigation Arrow Color', 'sndr-log-carousel'),
       value: navigationArrowColor,
       onChange: value => {
         setAttributes({
@@ -1551,7 +1643,7 @@ const StyleTab = ({
         });
       }
     }, {
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Pagination Dot Color', 'mrs-log-carousel'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Pagination Dot Color', 'sndr-log-carousel'),
       value: paginationDotColor,
       onChange: value => {
         setAttributes({
@@ -1559,14 +1651,14 @@ const StyleTab = ({
         });
       }
     }]
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('This color settings will be shown in the front-end', 'mrs-logo-carousel')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), enableNavigationArrows && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_RSRangeControl_RSRangeControl__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Navigation Arrow Size', 'mrs-logo-carousel'),
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('This color settings will be shown in the front-end', 'sndr-logo-carousel')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalDivider, null), enableNavigationArrows && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_component_SNDRRangeControl_SNDRRangeControl__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Navigation Arrow Size', 'sndr-logo-carousel'),
     min: 5,
     max: 100,
     attributes: navigationArrowSize,
     attributesKey: 'navigationArrowSize',
     setAttributes: setAttributes
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('This Navigation arrow size settings will be shown in the front-end', 'mrs-logo-carousel')))));
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('This Navigation arrow size settings will be shown in the front-end', 'sndr-logo-carousel')))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StyleTab);
 
@@ -1608,10 +1700,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/component/RSRangeControl/RSRangeControl.scss":
-/*!**********************************************************!*\
-  !*** ./src/component/RSRangeControl/RSRangeControl.scss ***!
-  \**********************************************************/
+/***/ "./src/component/SNDRRangeControl/SNDRRangeControl.scss":
+/*!**************************************************************!*\
+  !*** ./src/component/SNDRRangeControl/SNDRRangeControl.scss ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1620,10 +1712,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/component/mrsPanel/MRSPanel.scss":
-/*!**********************************************!*\
-  !*** ./src/component/mrsPanel/MRSPanel.scss ***!
-  \**********************************************/
+/***/ "./src/component/sndrPanel/sndrPanel.scss":
+/*!************************************************!*\
+  !*** ./src/component/sndrPanel/sndrPanel.scss ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -12929,7 +13021,7 @@ SwiperSlide.displayName = 'SwiperSlide';
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"mrs-block/mrs-logo-carousel","version":"0.1.1","title":"MRS Logo Carousel","category":"text","icon":"slides","description":"A simple Gutenberg form widget.","example":{},"supports":{"html":false,"align":["wide","full"]},"attributes":{"uniqueId":{"type":"string","default":""},"slider":{"type":"array","default":[{"id":"1","title":"First Title","description":"First Description","logo":{"url":"","alt":"","imgId":""}},{"id":"2","title":"Second Title","description":"Second Description","logo":{"url":"","alt":"","imgId":""}},{"id":"3","title":"Third Title","description":"Third Description","logo":{"url":"","alt":"","imgId":""}}]},"sliderId":{"type":"array","default":[{"id":"1"},{"id":"2"},{"id":"3"}]},"autoPlay":{"type":"boolean","default":true},"autoPlaySpeed":{"type":"number","default":3000},"infiniteLoop":{"type":"boolean","default":true},"pauseOn":{"type":"string","default":"Hover"},"enableTitle":{"type":"boolean","default":true},"titleTag":{"type":"string","default":"h4"},"sliderTitle":{"type":"array","default":[{"id":"1","title":"First Title"},{"id":"2","title":"Second Title"},{"id":"3","title":"Third Title"}]},"enableDescription":{"type":"boolean","default":true},"descriptionTag":{"type":"string","default":"p"},"sliderDescription":{"type":"array","default":[{"id":"1","description":"First Description"},{"id":"2","description":"Second Description"},{"id":"3","description":"Third Description"}]},"enableLogo":{"type":"boolean","default":true},"sliderLogoImage":{"type":"array","default":[{"id":"1","imgId":"","url":"","alt":""},{"id":"2","imgId":"","url":"","alt":""},{"id":"3","imgId":"","url":"","alt":""}]},"logoPosition":{"type":"string","default":"above"},"targetLink":{"type":"boolean","default":false},"linkFollow":{"type":"boolean","default":false},"enableNavigationArrows":{"type":"boolean","default":true},"enablePaginationDots":{"type":"boolean","default":true},"slidePerView":{"type":"number","default":1},"slideSpaceBetween":{"type":"number","default":1},"sliderAlignment":{"type":"string","default":"center"},"sliderBGColor":{"type":"string","default":""},"sliderTitleColor":{"type":"string","default":""},"sliderDesColor":{"type":"string","default":""},"navigationArrowColor":{"type":"string","default":""},"navigationArrowSize":{"type":"number","default":30},"paginationDotColor":{"type":"string","default":""},"desktopHide":{"type":"boolean","default":false},"tabletHide":{"type":"boolean","default":false},"mobileHide":{"type":"boolean","default":false},"sliderMargin":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderPadding":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderBorder":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderBorderStyle":{"type":"string","default":"none"},"sliderBorderColor":{"type":"string","default":""},"singleSlideBorder":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"singleSlideBorderStyle":{"type":"string","default":"none"},"singleSlideBorderColor":{"type":"string","default":""},"singleSlideMargin":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"singleSlidePadding":{"type":"object","default":{"top":"0px","left":"0px","bottom":"0px","right":"0px"}}},"textdomain":"mrs-logo-carousel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"sndr-block/sndr-logo-carousel","version":"0.1.1","title":"Sundor Logo Carousel","category":"text","icon":"slides","description":"A simple Gutenberg form widget.","example":{},"supports":{"html":false,"align":["wide","full"]},"attributes":{"uniqueId":{"type":"string","default":""},"frontendCss":{"type":"string","default":""},"sliderId":{"type":"array","default":[{"id":"1"},{"id":"2"},{"id":"3"}]},"autoPlay":{"type":"boolean","default":true},"autoPlaySpeed":{"type":"number","default":3000},"infiniteLoop":{"type":"boolean","default":true},"pauseOn":{"type":"string","default":"Hover"},"enableTitle":{"type":"boolean","default":true},"titleTag":{"type":"string","default":"h4"},"sliderTitle":{"type":"array","default":[{"id":"1","title":"First Title"},{"id":"2","title":"Second Title"},{"id":"3","title":"Third Title"}]},"enableDescription":{"type":"boolean","default":true},"descriptionTag":{"type":"string","default":"p"},"sliderDescription":{"type":"array","default":[{"id":"1","description":"First Description"},{"id":"2","description":"Second Description"},{"id":"3","description":"Third Description"}]},"enableLogo":{"type":"boolean","default":true},"sliderLogoImage":{"type":"array","default":[{"id":"1","imgId":"","url":"","alt":""},{"id":"2","imgId":"","url":"","alt":""},{"id":"3","imgId":"","url":"","alt":""}]},"logoPosition":{"type":"string","default":"above"},"targetLink":{"type":"boolean","default":false},"linkFollow":{"type":"boolean","default":false},"enableNavigationArrows":{"type":"boolean","default":true},"enablePaginationDots":{"type":"boolean","default":true},"slidePerView":{"type":"number","default":1},"slideSpaceBetween":{"type":"number","default":1},"sliderAlignment":{"type":"string","default":"center"},"sliderBGColor":{"type":"string","default":""},"sliderTitleColor":{"type":"string","default":""},"sliderDesColor":{"type":"string","default":""},"navigationArrowColor":{"type":"string","default":""},"navigationArrowSize":{"type":"number","default":30},"paginationDotColor":{"type":"string","default":""},"desktopHide":{"type":"boolean","default":false},"tabletHide":{"type":"boolean","default":false},"mobileHide":{"type":"boolean","default":false},"sliderMargin":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderPadding":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderBorder":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"sliderBorderStyle":{"type":"string","default":"none"},"sliderBorderColor":{"type":"string","default":""},"singleSlideBorder":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"singleSlideBorderStyle":{"type":"string","default":"none"},"singleSlideBorderColor":{"type":"string","default":""},"singleSlideMargin":{"type":"object","default":{"top":"0","left":"0","bottom":"0","right":"0"}},"singleSlidePadding":{"type":"object","default":{"top":"0px","left":"0px","bottom":"0px","right":"0px"}},"contentAlignment":{"type":"string","default":"Top"}},"textdomain":"sndr-logo-carousel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

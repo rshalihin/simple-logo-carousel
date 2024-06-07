@@ -36,16 +36,16 @@ const RSSlider = ({ dataId, attributes, setAttributes}) => {
     
     }
     return (
-        <div className={'mrs-logo-carousel-swiper-slider-content-wrapper'}  style={{textAlign: sliderAlignment}}>
+        <div className={'sndr-logo-carousel-swiper-slider-content-wrapper'}  style={{textAlign: sliderAlignment}}>
 
             {logoPosition === 'above' && enableTitle && sliderTitle?.map((slide, i) => {
                 if( parseInt( slide.id ) === parseInt(dataId) ){
                     return(
-                        <div className='mrs-logo-carousel-swiper-slider-title'>
+                        <div className='sndr-logo-carousel-swiper-slider-title'>
                             <RichText 
                                 tagName={titleTag}
                                 style={{ color: sliderTitleColor}}
-                                placeholder={__('Logo Title', 'mrs-logo-slider')}
+                                placeholder={__('Logo Title', 'sndr-logo-slider')}
                                 value={slide.title}
                                 onChange={(value) =>onChangeLogoTitle(slide.id, value)}
                             />
@@ -58,7 +58,7 @@ const RSSlider = ({ dataId, attributes, setAttributes}) => {
                 if( parseInt( item.id ) === parseInt(dataId) ){
                     if( !item.url ){
                         return(
-                            <div className={'mrs-logo-carousel-swiper-slider-image'}>
+                            <div className={'sndr-logo-carousel-swiper-slider-image'}>
                                 <MediaPlaceholder
                                     icon={"admin-users"}
                                     allowedTypes={['image']}
@@ -71,7 +71,7 @@ const RSSlider = ({ dataId, attributes, setAttributes}) => {
                         )
                     }else{
                         return(
-                            <div className={'mrs-logo-carousel-swiper-slider-image'}>
+                            <div className={'sndr-logo-carousel-swiper-slider-image'}>
                                 <img 
                                     src={item.url} 
                                     alt={item.alt}
@@ -85,11 +85,11 @@ const RSSlider = ({ dataId, attributes, setAttributes}) => {
             {logoPosition === 'below' && enableTitle && sliderTitle?.map((slide, i) => {
                 if( parseInt( slide.id ) === parseInt(dataId) ){
                     return(
-                        <div className='mrs-logo-carousel-swiper-slider-title'>
+                        <div className='sndr-logo-carousel-swiper-slider-title'>
                             <RichText 
                                 tagName={titleTag}
                                 style={{ color: sliderTitleColor}}
-                                placeholder={__('Logo Title', 'mrs-logo-slider')}
+                                placeholder={__('Logo Title', 'sndr-logo-slider')}
                                 value={slide.title}
                                 onChange={(value) =>onChangeLogoTitle(slide.id, value)}
                             />
@@ -101,10 +101,10 @@ const RSSlider = ({ dataId, attributes, setAttributes}) => {
             { enableDescription && sliderDescription?.map((item, i) => {
                 if( parseInt( item.id ) === parseInt(dataId) ){
                     return(
-                        <div className='mrs-logo-carousel-slide-des'  style={{ color: sliderDesColor}}>
+                        <div className='sndr-logo-carousel-slide-des'  style={{ color: sliderDesColor}}>
                             <RichText 
                                 tagName={descriptionTag}
-                                placeholder={__('Logo Description', 'mrs-logo-slider')}
+                                placeholder={__('Logo Description', 'sndr-logo-slider')}
                                 value={item.description}
                                 onChange={(value) =>onChangeLogoDescription(item.id, value)}
                             />

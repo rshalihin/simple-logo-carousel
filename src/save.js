@@ -2,38 +2,35 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
 import './style.scss';
 
 export default function save({attributes}) {
-	const {desktopHide, tabletHide, mobileHide, sliderBGColor, sliderId, sliderAlignment, logoPosition, enableTitle, sliderTitle, sliderTitleColor, titleTag, sliderLogoImage, enableDescription, sliderDescription, sliderDesColor, descriptionTag, sliderMargin, sliderPadding, enableNavigationArrows, enablePaginationDots, sliderBorder, sliderBorderStyle, sliderBorderColor, singleSlideBorder, singleSlideBorderStyle, singleSlideBorderColor, singleSlideMargin, singleSlidePadding } = attributes;
+	const {desktopHide, tabletHide, mobileHide, sliderId, sliderAlignment, logoPosition, enableTitle, sliderTitle, sliderTitleColor, titleTag, sliderLogoImage, enableDescription, sliderDescription, sliderDesColor, descriptionTag, enableNavigationArrows, enablePaginationDots, frontendCss, uniqueId, slidePerView, slideSpaceBetween, infiniteLoop, autoPlaySpeed } = attributes;
 
-	const swiperJson = JSON.stringify(attributes);
+	const swiperVariable = { slidePerView, slideSpaceBetween, infiniteLoop, autoPlaySpeed};
+
+	const swiperJson = JSON.stringify(swiperVariable);
+	const css = frontendCss?.substring(1, frontendCss.length - 1);
 
 	return (
 		<>
+		<style>{css}</style>
 		<div { ...useBlockProps.save({
-			style: { borderTop: `${sliderBorder.top} ${sliderBorderStyle} ${sliderBorderColor}`, borderBottom: `${sliderBorder.bottom} ${sliderBorderStyle} ${sliderBorderColor}`, borderRight: `${sliderBorder.right} ${sliderBorderStyle} ${sliderBorderColor}`, borderLeft: `${sliderBorder.left} ${sliderBorderStyle} ${sliderBorderColor}`}
+			className: `sndr-logo-carousel-${uniqueId}`
 		}) }>
-			<div className={`mrs-logo-carousel-wrapper ${desktopHide ? 'hide-desktop' : ''}${tabletHide ? ' hide-tablet' : ''}${mobileHide ? ' hide-mobile' : ''}`} style={{background: sliderBGColor}} >
+			<div className={`sndr-logo-carousel-wrapper ${desktopHide ? 'hide-desktop' : ''}${tabletHide ? ' hide-tablet' : ''}${mobileHide ? ' hide-mobile' : ''}`}>
 
-				<div className={'mrs-logo-carousel'} style={{marginTop: `${sliderMargin.top}`, marginBottom: `${sliderMargin.bottom}`, marginLeft: `${sliderMargin.left}`, marginRight: `${sliderMargin.right}`, paddingTop: `${sliderPadding.top}`, paddingBottom: `${sliderPadding.bottom}`, paddingRight: `${sliderPadding.right}`, paddingLeft: `${sliderPadding.left}`}}>
+				<div className={'sndr-logo-carousel'}>
 
-					<div className="swiper mrsSwiper">
+					<div className="swiper sndrSwiper">
 						<div className="swiper-wrapper">
 						{sliderId?.map((slideId, i)=>(
 
-							<div className="swiper-slide" style={{background: sliderBGColor,
-								borderTop: `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-								borderBottom: `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-								borderRight: `${singleSlideBorder.right} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-								borderLeft: `${singleSlideBorder.left} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-								marginTop: `${singleSlideMargin.top}`, marginBottom: `${singleSlideMargin.bottom}`, marginLeft: `${singleSlideMargin.left}`, marginRight: `${singleSlideMargin.right}`,
-								paddingTop: `${singleSlidePadding.top}`, paddingBottom: `${singleSlidePadding.bottom}`, paddingRight: `${singleSlidePadding.right}`, paddingLeft: `${singleSlidePadding.left}`
-								}}>
-								<div key={i} className={'mrs-logo-carousel-swiper-slider-content-wrapper'}  style={{textAlign: sliderAlignment}}>
+							<div className="swiper-slide">
+								<div key={i} className={'sndr-logo-carousel-swiper-slider-content-wrapper'}  style={{textAlign: sliderAlignment}}>
 
 								{/** Above Title */}
 								{logoPosition === 'above' && enableTitle && sliderTitle?.map((slide, i) => {
 									if( parseInt( slide.id ) === parseInt(slideId.id) ){
 										return(
-											<div className='mrs-logo-carousel-swiper-slider-title'>
+											<div className='sndr-logo-carousel-swiper-slider-title'>
 												<RichText.Content
 													tagName={titleTag}
 													style={{ color: sliderTitleColor}}
@@ -49,7 +46,7 @@ export default function save({attributes}) {
 									if( parseInt( item.id ) === parseInt(slideId.id) ){
 										if( item.url ) {
 											return(
-												<div className={'mrs-logo-carousel-swiper-slider-image'}>
+												<div className={'sndr-logo-carousel-swiper-slider-image'}>
 													<img 
 														src={item.url} 
 														alt={item.alt}
@@ -65,7 +62,7 @@ export default function save({attributes}) {
 								{logoPosition === 'below' &&  enableTitle && sliderTitle?.map((slide, i) => {
 									if( parseInt( slide.id ) === parseInt(slideId.id) ){
 										return(
-											<div className='mrs-logo-carousel-swiper-slider-title'>
+											<div className='sndr-logo-carousel-swiper-slider-title'>
 												<RichText.Content
 													tagName={titleTag}
 													style={{ color: sliderTitleColor}}
@@ -80,7 +77,7 @@ export default function save({attributes}) {
 								{ enableDescription && sliderDescription?.map((item, i) => {
 									if( parseInt( item.id ) === parseInt(slideId.id) ){
 										return(
-											<div className='mrs-logo-carousel-slide-des'  style={{ color: sliderDesColor}}>
+											<div className='sndr-logo-carousel-slide-des'  style={{ color: sliderDesColor}}>
 												<RichText.Content
 													tagName={descriptionTag}
 													value={item.description}
@@ -109,7 +106,7 @@ export default function save({attributes}) {
 				</div>				
 			</div>
 		</div>
-		<div class='mrs-logo-carousel-data-attributes' data-attributes={swiperJson}></div>
+		<div class='sndr-logo-carousel-data-attributes' data-attributes={swiperJson}></div>
 		</>
 	);
 }

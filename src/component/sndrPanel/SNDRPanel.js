@@ -1,9 +1,9 @@
 import { __ } from '@wordpress/i18n';
 import { PanelBody, Button, __experimentalDivider as Divider, TextControl, TextareaControl } from '@wordpress/components';
 import { MediaUpload } from '@wordpress/block-editor';
-import './MRSPanel.scss';
+import './sndrPanel.scss';
 
-const MRSPanel = ({title, open, data='', attributes, setAttributes,}) => {
+const sndrPanel = ({title, open, data='', attributes, setAttributes,}) => {
     const {sliderId, sliderTitle, sliderDescription, sliderLogoImage} = attributes;
     const deleteSlide = (data) => {
         const updateSliderId = sliderId.slice(parseInt(data));
@@ -58,13 +58,13 @@ const MRSPanel = ({title, open, data='', attributes, setAttributes,}) => {
 
     return(
         <>
-        <div className='mrs-logo-carousel-single-slide-sidebar-tab'>
+        <div className='sndr-logo-carousel-single-slide-sidebar-tab'>
             <PanelBody title={title} initialOpen={open}>
-                <div className={'mrs-logo-carousel-single-slide-sidebar-tab-content'}>
+                <div className={'sndr-logo-carousel-single-slide-sidebar-tab-content'}>
                     <div>
                         <label>Image</label>
-                        <div className='mrs-media-control__wrapper' style={{backgroundImage: `url("${LogoBackgroundImage(data)}")`, backgroundPosition: 'center', backgroundSize: 'contain', marginTop: '10px'}}>
-                            <div className='mrs-media-control__footer'>
+                        <div className='sndr-media-control__wrapper' style={{backgroundImage: `url("${LogoBackgroundImage(data)}")`, backgroundPosition: 'center', backgroundSize: 'contain', marginTop: '10px'}}>
+                            <div className='sndr-media-control__footer'>
                                 <MediaUpload
                                     onSelect={ ( media ) =>
                                         onClickImageChange(media, data)
@@ -75,31 +75,31 @@ const MRSPanel = ({title, open, data='', attributes, setAttributes,}) => {
                                     ) }
                                 />
                                 </div>
-                            <div className='mrs-media-control__clickable'>
-                                <Button className='mrs-media-control__button--close' icon='no' onClick={()=>(deleteSlideLogoImage(data))}></Button>
+                            <div className='sndr-media-control__clickable'>
+                                <Button className='sndr-media-control__button--close' icon='no' onClick={()=>(deleteSlideLogoImage(data))}></Button>
                                 </div>
                         </div>
                     </div>  
                     <Divider />
                     <TextControl
-                        label={__('Title', 'mrs-logo-carousel')}
+                        label={__('Title', 'sndr-logo-carousel')}
                         value={sliderTitle?.find(t=> t.id === data).title}
-                        placeholder={__('Logo Title', 'mrs-logo-carousel')}
+                        placeholder={__('Logo Title', 'sndr-logo-carousel')}
                         onChange={(newTitle)=>{onChangeLogoTitles(data, newTitle)}}
                     />
                     <Divider />
                     <TextareaControl
-                        label={__('Description', 'mrs-logo-carousel')}
-                        placeholder={__('Logo Description', 'mrs-logo-carousel')}
+                        label={__('Description', 'sndr-logo-carousel')}
+                        placeholder={__('Logo Description', 'sndr-logo-carousel')}
                         value={sliderDescription?.find(t => t.id === data ).description}
                         onChange={(newDes) => {onChangeLogoDescription(data, newDes)}}
                     />
                 </div>
             </PanelBody>
-            <Button icon="no" className='mrs-logo-carousel-single-slide-sidebar-tab-close-button' onClick={()=>deleteSlide(data)}></Button>
+            <Button icon="no" className='sndr-logo-carousel-single-slide-sidebar-tab-close-button' onClick={()=>deleteSlide(data)}></Button>
         </div>
         </>
     )
 }
 
-export default MRSPanel;
+export default sndrPanel;

@@ -13,29 +13,29 @@ const TabControls = ({attributes, setAttributes, GeneralTab = '', StyleTab = '',
     if(GeneralTab) {
         Tabs.push({
             name: 'general',
-            title: <span className='mrs-tab-panel-title'>{GeneralIcon()} General</span>,
-            className: 'mrs-general-tab',
+            title: <span className='sndr-tab-panel-title'>{GeneralIcon()} General</span>,
+            className: 'sndr-general-tab',
         })
     }
     if(StyleTab) {
         Tabs.push({
             name: 'style',
-            title: <span className='mrs-tab-panel-title'> {StyleIcon()} Style</span>,
-            className: 'mrs-style-tab',
+            title: <span className='sndr-tab-panel-title'> {StyleIcon()} Style</span>,
+            className: 'sndr-style-tab',
         })
     }
     if(AdvancedTab) {
         Tabs.push({
             name: 'advanced',
-            title: <span className='mrs-tab-panel-title'>
+            title: <span className='sndr-tab-panel-title'>
             {AdvancedIcon()} Advanced</span>,
-            className: 'mrs-advanced-tab',
+            className: 'sndr-advanced-tab',
         })
     }
 
     return (
         <TabPanel
-            className="mrs-tab-panel"
+            className="sndr-tab-panel"
             activeClass="active-tab"
             tabs={ Tabs }
         >

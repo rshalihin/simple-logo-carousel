@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "mrs-block/mrs-logo-carousel",
+  "name": "sndr-block/sndr-logo-carousel",
   "version": "0.1.1",
-  "title": "MRS Logo Carousel",
+  "title": "Sundor Logo Carousel",
   "category": "text",
   "icon": "slides",
   "description": "A simple Gutenberg form widget.",
@@ -20,40 +20,9 @@
       "type": "string",
       "default": ""
     },
-    "slider": {
-      "type": "array",
-      "default": [
-        {
-          "id": "1",
-          "title": "First Title",
-          "description": "First Description",
-          "logo": {
-            "url": "",
-            "alt": "",
-            "imgId": ""
-          }
-        },
-        {
-          "id": "2",
-          "title": "Second Title",
-          "description": "Second Description",
-          "logo": {
-            "url": "",
-            "alt": "",
-            "imgId": ""
-          }
-        },
-        {
-          "id": "3",
-          "title": "Third Title",
-          "description": "Third Description",
-          "logo": {
-            "url": "",
-            "alt": "",
-            "imgId": ""
-          }
-        }
-      ]
+    "frontendCss": {
+      "type": "string",
+      "default": ""
     },
     "sliderId": {
       "type": "array",
@@ -299,9 +268,13 @@
         "bottom": "0px",
         "right": "0px"
       }
+    },
+    "contentAlignment": {
+      "type": "string",
+      "default": "Top"
     }
   },
-  "textdomain": "mrs-logo-carousel",
+  "textdomain": "sndr-logo-carousel",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css"

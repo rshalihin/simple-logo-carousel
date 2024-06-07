@@ -16,33 +16,33 @@ const AdvanceTab = ({attributes, setAttributes}) => {
     
     return(
         <>
-            <PanelBody title={ __( 'Spacing', 'mrs-logo-carousel' ) } initialOpen={ true } className='mrs-logo-carousel-advance-tab-panel'>
+            <PanelBody title={ __( 'Spacing', 'sndr-logo-carousel' ) } initialOpen={ true } className='sndr-logo-carousel-advance-tab-panel'>
                 <BoxControl
-                    label={__('Margin', 'mrs-logo-carousel')}
+                    label={__('Margin', 'sndr-logo-carousel')}
                     values={sliderMargin}
                     onChange={onChangeSliderMargin}
                 />
                 <BoxControl
-                    label={__('Padding', 'mrs-logo-carousel')}
+                    label={__('Padding', 'sndr-logo-carousel')}
                     values={sliderPadding}
                     onChange={onChangeSliderPadding}
                 />
             </PanelBody>
-            <PanelBody title={ __( 'Responsive', 'mrs-logo-carousel' ) } initialOpen={ true }>
+            <PanelBody title={ __( 'Responsive', 'sndr-logo-carousel' ) } initialOpen={ true }>
                 <Toggle
-                    label={__( 'Hide on Desktop', 'mrs-logo-carousel' )}
+                    label={__( 'Hide on Desktop', 'sndr-logo-carousel' )}
                     attributes={ desktopHide }
                     attributesKey={'desktopHide'}
                     setAttributes={ setAttributes }
                 />
                 <Toggle 
-                    label={ __( 'Hide on Tablet', 'mrs-logo-carousel' )}
+                    label={ __( 'Hide on Tablet', 'sndr-logo-carousel' )}
                     attributes={ tabletHide }
                     attributesKey={ 'tabletHide' }
                     setAttributes={ setAttributes }
                 />
                 <Toggle
-                    label={ __( 'Hide on Mobile', 'mrs-logo-carousel' )}
+                    label={ __( 'Hide on Mobile', 'sndr-logo-carousel' )}
                     attributes={ mobileHide }
                     attributesKey={ 'mobileHide' }
                     setAttributes={ setAttributes }

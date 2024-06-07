@@ -5,6 +5,7 @@ import { select } from '@wordpress/data';
 import { useState, useEffect } from '@wordpress/element';
 import Inspector from './Inspector';
 import RSSlider from './RSSlider';
+import dynamicCss from './dynamicCss';
 
 // import swiper 
 // Import Swiper React components
@@ -23,7 +24,7 @@ import './editor.scss';
 let firstTimeLoad = true;
 
 export default function Edit({ attributes, setAttributes, clientId, isSelected }) {
-	const { uniqueId, enableNavigationArrows, enablePaginationDots, slidePerView, slideSpaceBetween, infiniteLoop, autoPlay, pauseOn, autoPlaySpeed, sliderId, sliderAlignment, sliderTitle, sliderDescription, sliderLogoImage, sliderBGColor, desktopHide, tabletHide, mobileHide, sliderMargin, sliderPadding, sliderBorder, sliderBorderStyle, sliderBorderColor, singleSlideBorder, singleSlideBorderStyle, singleSlideBorderColor, singleSlideMargin, singleSlidePadding } = attributes;
+	const { uniqueId, enableNavigationArrows, enablePaginationDots, slidePerView, slideSpaceBetween, infiniteLoop, autoPlay, pauseOn, autoPlaySpeed, sliderId, sliderAlignment, sliderTitle, sliderDescription, sliderLogoImage, sliderBGColor, desktopHide, tabletHide, mobileHide, frontendCss } = attributes;
 
 	const [ onLoad, setOnLoad ] = useState(false);
 
@@ -74,6 +75,11 @@ export default function Edit({ attributes, setAttributes, clientId, isSelected }
 		setAttributes({sliderLogoImage: [...sliderLogoImage, {"id": (sliderLogoImage.length + 1).toString(), "imgId": "", "url": "", "alt": "" }]});
 	}	
 
+	useEffect(() => {
+		setAttributes({ frontendCss: JSON.stringify(dynamicCss(attributes)) });
+	},[attributes])
+
+	// console.log(uniqueId);
 	return (
 		<>
 		<Inspector
@@ -91,15 +97,16 @@ export default function Edit({ attributes, setAttributes, clientId, isSelected }
 			<ToolbarButton
 				onClick={()=>addSlideButtonClick()}
 				icon="plus-alt"
-				label={__('Add Slide', 'mrs-logo-carousel')}
+				label={__('Add Slide', 'sndr-logo-carousel')}
 			/>
 		</BlockControls>
+		<style>{dynamicCss(attributes)}</style>
 		<div { ...useBlockProps({
-			style: { borderTop: `${sliderBorder.top} ${sliderBorderStyle} ${sliderBorderColor}`, borderBottom: `${sliderBorder.bottom} ${sliderBorderStyle} ${sliderBorderColor}`, borderRight: `${sliderBorder.right} ${sliderBorderStyle} ${sliderBorderColor}`, borderLeft: `${sliderBorder.left} ${sliderBorderStyle} ${sliderBorderColor}`}
+			className: `sndr-logo-carousel-${uniqueId}`
 		}) }>
-			<div className={`mrs-logo-carousel-wrapper ${desktopHide ? 'hide-desktop' : ''}${tabletHide ? ' hide-tablet' : ''}${mobileHide ? ' hide-mobile' : ''}`} style={{background: sliderBGColor}}>
+			<div className={`sndr-logo-carousel-wrapper ${desktopHide ? 'hide-desktop' : ''}${tabletHide ? ' hide-tablet' : ''}${mobileHide ? ' hide-mobile' : ''}`}>
 
-				<div className={'mrs-logo-carousel'} style={{marginTop: `${sliderMargin.top}`, marginBottom: `${sliderMargin.bottom}`, marginLeft: `${sliderMargin.left}`, marginRight: `${sliderMargin.right}`, paddingTop: `${sliderPadding.top}`, paddingBottom: `${sliderPadding.bottom}`, paddingRight: `${sliderPadding.right}`, paddingLeft: `${sliderPadding.left}`}}>
+				<div className={'sndr-logo-carousel'}>
 
 				<Swiper
 					slidesPerView={slidePerView}
@@ -115,17 +122,10 @@ export default function Edit({ attributes, setAttributes, clientId, isSelected }
 					} : false }
 					navigation={enableNavigationArrows}
 					modules={[Autoplay, Pagination, Navigation]}
-					className="mrsSwiper"
+					className="sndrSwiper"
 				>
 					{sliderId?.map((slideId, i)=>(
-						<SwiperSlide  style={{background: sliderBGColor,
-						borderTop: `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-						borderBottom: `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-						borderRight: `${singleSlideBorder.right} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-						borderLeft: `${singleSlideBorder.left} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
-						marginTop: `${singleSlideMargin.top}`, marginBottom: `${singleSlideMargin.bottom}`, marginLeft: `${singleSlideMargin.left}`, marginRight: `${singleSlideMargin.right}`,
-						paddingTop: `${singleSlidePadding.top}`, paddingBottom: `${singleSlidePadding.bottom}`, paddingRight: `${singleSlidePadding.right}`, paddingLeft: `${singleSlidePadding.left}`
-						}}>
+						<SwiperSlide>
 							<RSSlider key={i} dataId={slideId.id} attributes={attributes} setAttributes={setAttributes}>
 							</RSSlider>
 						</SwiperSlide>

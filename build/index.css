@@ -6,75 +6,75 @@
   padding: 0;
 }
 
-.block-editor-block-inspector .mrs-tab-panel .components-base-control:last-child {
+.block-editor-block-inspector .sndr-tab-panel .components-base-control:last-child {
   margin-bottom: 0px;
 }
 
-div:has(> .mrs-tab-panel) ~ div:has(> .block-editor-block-inspector__advanced) {
+div:has(> .sndr-tab-panel) ~ div:has(> .block-editor-block-inspector__advanced) {
   display: none;
 }
 
-.mrs-tab-panel .components-tab-panel__tabs-item:focus:not(:disabled) {
+.sndr-tab-panel .components-tab-panel__tabs-item:focus:not(:disabled) {
   box-shadow: none;
 }
-.mrs-tab-panel .components-tab-panel__tabs {
+.sndr-tab-panel .components-tab-panel__tabs {
   justify-content: center;
 }
-.mrs-tab-panel .components-tab-panel__tabs > button {
+.sndr-tab-panel .components-tab-panel__tabs > button {
   padding: 0;
 }
-.mrs-tab-panel .components-tab-panel__tabs button {
+.sndr-tab-panel .components-tab-panel__tabs button {
   background-color: #0f7165;
   color: #fff;
   height: 40px;
   width: 100%;
   justify-content: center;
 }
-.mrs-tab-panel .components-tab-panel__tabs button:not(:last-child) {
+.sndr-tab-panel .components-tab-panel__tabs button:not(:last-child) {
   border-right: 1px solid #fff;
 }
-.mrs-tab-panel .components-tab-panel__tabs button span {
+.sndr-tab-panel .components-tab-panel__tabs button span {
   display: flex;
   align-items: center;
 }
-.mrs-tab-panel .components-tab-panel__tabs button span svg {
+.sndr-tab-panel .components-tab-panel__tabs button span svg {
   margin-right: 4px;
   fill: #fff;
 }
-.mrs-tab-panel .components-tab-panel__tabs button.active-tab {
+.sndr-tab-panel .components-tab-panel__tabs button.active-tab {
   background-color: #ffffff;
   color: #0f7165;
   border-bottom-color: transparent;
   border-top: 2px solid;
 }
-.mrs-tab-panel .components-tab-panel__tabs button.active-tab span svg {
+.sndr-tab-panel .components-tab-panel__tabs button.active-tab span svg {
   fill: #0f7165;
 }
-.mrs-tab-panel .components-panel__body.is-opened > .components-panel__body-title {
+.sndr-tab-panel .components-panel__body.is-opened > .components-panel__body-title {
   background-color: #F0F0F0;
   margin-bottom: 12px;
 }
-.mrs-tab-panel .components-panel__body .components-panel__body-title button:focus:not(:disabled) {
+.sndr-tab-panel .components-panel__body .components-panel__body-title button:focus:not(:disabled) {
   box-shadow: none;
   outline: none;
 }
-.mrs-tab-panel .mrs-accordion {
+.sndr-tab-panel .sndr-accordion {
   margin: 12px 0;
 }
-.mrs-tab-panel .mrs-component-mb {
+.sndr-tab-panel .sndr-component-mb {
   margin-bottom: 24px;
 }
-.mrs-tab-panel .mrs-component-mb:last-child {
+.sndr-tab-panel .sndr-component-mb:last-child {
   margin-bottom: 0px;
 }
-.mrs-tab-panel .mrs-component-top {
+.sndr-tab-panel .sndr-component-top {
   display: flex;
 }
-.mrs-tab-panel .mrs-ranger-title,
-.mrs-tab-panel .components-base-control__label,
-.mrs-tab-panel .components-input-control__label,
-.mrs-tab-panel .components-toggle-control__label,
-.mrs-tab-panel .mrs-component-title {
+.sndr-tab-panel .sndr-ranger-title,
+.sndr-tab-panel .components-base-control__label,
+.sndr-tab-panel .components-input-control__label,
+.sndr-tab-panel .components-toggle-control__label,
+.sndr-tab-panel .sndr-component-title {
   text-transform: uppercase;
   color: #757575;
   font-weight: 700;
@@ -82,39 +82,39 @@ div:has(> .mrs-tab-panel) ~ div:has(> .block-editor-block-inspector__advanced) {
   margin-bottom: 8px;
   display: inline-block;
 }
-.mrs-tab-panel .components-input-control__label {
+.sndr-tab-panel .components-input-control__label {
   margin-bottom: 0;
   font-weight: 700 !important;
 }
-.mrs-tab-panel .mrs-header-control {
+.sndr-tab-panel .sndr-header-control {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.mrs-tab-panel .mrs-header-control-left {
+.sndr-tab-panel .sndr-header-control-left {
   display: flex;
 }
-.mrs-tab-panel .mrs-header-control-right {
+.sndr-tab-panel .sndr-header-control-right {
   display: flex;
   margin-top: 2px;
 }
-.mrs-tab-panel .mrs-header-control-reset {
+.sndr-tab-panel .sndr-header-control-reset {
   height: 18px;
   padding: 0;
   margin-right: 10px;
 }
-.mrs-tab-panel .mrs-header-control-reset.active {
+.sndr-tab-panel .sndr-header-control-reset.active {
   color: #0f7165;
 }
-.mrs-tab-panel .mrs-header-control-reset:focus:not(:disabled) {
+.sndr-tab-panel .sndr-header-control-reset:focus:not(:disabled) {
   outline: none;
   box-shadow: none;
 }
-.mrs-tab-panel .mrs-units {
+.sndr-tab-panel .sndr-units {
   position: relative;
   color: #8C8F94;
 }
-.mrs-tab-panel .mrs-units-btn {
+.sndr-tab-panel .sndr-units-btn {
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
   position: absolute;
   z-index: 999;
@@ -123,18 +123,18 @@ div:has(> .mrs-tab-panel) ~ div:has(> .block-editor-block-inspector__advanced) {
   visibility: hidden;
   transition: 0.3s;
 }
-.mrs-tab-panel .mrs-units:hover .mrs-units-btn {
+.sndr-tab-panel .sndr-units:hover .sndr-units-btn {
   opacity: 1;
   visibility: visible;
 }
-.mrs-tab-panel .mrs-units:hover span {
+.sndr-tab-panel .sndr-units:hover span {
   border-color: #0f7165;
   color: #0f7165;
 }
-.mrs-tab-panel .mrs-units:hover span svg {
+.sndr-tab-panel .sndr-units:hover span svg {
   fill: #0f7165;
 }
-.mrs-tab-panel .mrs-units span {
+.sndr-tab-panel .sndr-units span {
   display: inline-block;
   font-size: 10px;
   padding: 0px;
@@ -148,13 +148,13 @@ div:has(> .mrs-tab-panel) ~ div:has(> .block-editor-block-inspector__advanced) {
   cursor: pointer;
   text-transform: capitalize;
 }
-.mrs-tab-panel .mrs-units span svg {
+.sndr-tab-panel .sndr-units span svg {
   fill: #8C8F94;
 }
-.mrs-tab-panel .mrs-units span.box-unit {
+.sndr-tab-panel .sndr-units span.box-unit {
   width: 45px !important;
 }
-.mrs-tab-panel .mrs-units button {
+.sndr-tab-panel .sndr-units button {
   padding: 0;
   width: 23px;
   height: 20px;
@@ -167,101 +167,101 @@ div:has(> .mrs-tab-panel) ~ div:has(> .block-editor-block-inspector__advanced) {
   border-radius: 0;
   box-shadow: none;
 }
-.mrs-tab-panel .mrs-units button:focus:not(:disabled) {
+.sndr-tab-panel .sndr-units button:focus:not(:disabled) {
   outline: none;
   box-shadow: none;
 }
-.mrs-tab-panel .mrs-units button.active {
+.sndr-tab-panel .sndr-units button.active {
   background-color: #0f7165;
   color: #fff;
 }
-.mrs-tab-panel .mrs-units.box .mrs-units-btn button {
+.sndr-tab-panel .sndr-units.box .sndr-units-btn button {
   width: 45px;
 }
 
-p.mrs-child-block-notice {
+p.sndr-child-block-notice {
   padding: 20px;
   margin: 0 16px 16px;
   background-color: #f1f1f1;
 }
 
-.edit-post-editor__list-view-panel-content .is-selected .mrs-block-icon svg {
+.edit-post-editor__list-view-panel-content .is-selected .sndr-block-icon svg {
   fill: #fff !important;
 }
 
-.mrs-block-icon {
+.sndr-block-icon {
   display: inline-flex;
 }
-.mrs-block-icon svg {
+.sndr-block-icon svg {
   fill: #0f7165 !important;
 }
 
-.block-editor-block-inspector .mrs-tab-panel .components-panel__body:first-child {
+.block-editor-block-inspector .sndr-tab-panel .components-panel__body:first-child {
   border-top: none;
 }
 /*!*********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/component/toggle/toggle.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************/
-.mrs-tab-panel .mrs-toggle .components-flex {
+.sndr-tab-panel .sndr-toggle .components-flex {
   flex-direction: row-reverse;
 }
-.mrs-tab-panel .mrs-toggle .components-toggle-control__label {
+.sndr-tab-panel .sndr-toggle .components-toggle-control__label {
   margin-bottom: 0px;
 }
-.mrs-tab-panel .mrs-toggle .components-form-toggle.is-checked .components-form-toggle__track {
+.sndr-tab-panel .sndr-toggle .components-form-toggle.is-checked .components-form-toggle__track {
   background: #008DB4;
 }
-.mrs-tab-panel .mrs-toggle .components-form-toggle.is-checked .components-form-toggle__thumb {
+.sndr-tab-panel .sndr-toggle .components-form-toggle.is-checked .components-form-toggle__thumb {
   background: #fff;
 }
-.mrs-tab-panel .mrs-toggle .components-form-toggle .components-form-toggle__thumb {
+.sndr-tab-panel .sndr-toggle .components-form-toggle .components-form-toggle__thumb {
   background: #757575;
   border-color: #757575;
 }
-/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/component/RSRangeControl/RSRangeControl.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************/
-.mrs-tab-panel .mrs-box-control {
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/component/SNDRRangeControl/SNDRRangeControl.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+.sndr-tab-panel .sndr-box-control {
   margin: 20px auto;
 }
-.mrs-tab-panel .mrs-box-control .components-flex {
+.sndr-tab-panel .sndr-box-control .components-flex {
   flex-direction: row-reverse;
   align-items: stretch;
 }
-.mrs-tab-panel .mrs-box-control .components-toggle-control__label {
+.sndr-tab-panel .sndr-box-control .components-toggle-control__label {
   margin-bottom: 0px;
 }
-.mrs-tab-panel .mrs-box-control .components-form-toggle.is-checked .components-form-toggle__track {
+.sndr-tab-panel .sndr-box-control .components-form-toggle.is-checked .components-form-toggle__track {
   background: #008DB4;
 }
-.mrs-tab-panel .mrs-box-control .components-form-toggle.is-checked .components-form-toggle__thumb {
+.sndr-tab-panel .sndr-box-control .components-form-toggle.is-checked .components-form-toggle__thumb {
   background: #fff;
 }
-.mrs-tab-panel .mrs-box-control .components-form-toggle .components-form-toggle__thumb {
+.sndr-tab-panel .sndr-box-control .components-form-toggle .components-form-toggle__thumb {
   background: #757575;
   border-color: #757575;
 }
-/*!*************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/component/mrsPanel/MRSPanel.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************************************/
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab {
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/component/sndrPanel/sndrPanel.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab {
   display: flex;
   justify-content: center;
   align-items: start;
   position: relative;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .components-panel__body {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .components-panel__body {
   flex-grow: 4;
   margin: 1px 0;
   border-radius: 5px;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .components-panel__body .components-panel__body-title {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .components-panel__body .components-panel__body-title {
   background-color: #eeeeee;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .components-panel__body .components-panel__body-title .components-button.components-panel__body-toggle .components-panel__arrow {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .components-panel__body .components-panel__body-title .components-button.components-panel__body-toggle .components-panel__arrow {
   right: 45px;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .mrs-logo-carousel-single-slide-sidebar-tab-close-button {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .sndr-logo-carousel-single-slide-sidebar-tab-close-button {
   width: 40px;
   height: 40px;
   flex-grow: 1;
@@ -271,10 +271,10 @@ p.mrs-child-block-notice {
   color: #f03;
   border: 1px solid #f03;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .mrs-logo-carousel-single-slide-sidebar-tab-content {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .sndr-logo-carousel-single-slide-sidebar-tab-content {
   background: #fff;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .mrs-logo-carousel-single-slide-sidebar-tab-content .mrs-media-control__wrapper {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .sndr-logo-carousel-single-slide-sidebar-tab-content .sndr-media-control__wrapper {
   height: 130px;
   width: 100%;
   border-radius: 3px;
@@ -291,13 +291,13 @@ p.mrs-child-block-notice {
   flex-direction: column;
   justify-content: flex-end;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .mrs-logo-carousel-single-slide-sidebar-tab-content .mrs-media-control__wrapper .mrs-media-control__footer {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .sndr-logo-carousel-single-slide-sidebar-tab-content .sndr-media-control__wrapper .sndr-media-control__footer {
   background: #f0f0f1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .mrs-logo-carousel-single-slide-sidebar-tab-content .mrs-media-control__wrapper .mrs-media-control__footer .mrs-fbtn-control-label {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .sndr-logo-carousel-single-slide-sidebar-tab-content .sndr-media-control__wrapper .sndr-media-control__footer .sndr-fbtn-control-label {
   flex-grow: 1;
   height: 26px;
   margin-bottom: 0;
@@ -307,12 +307,12 @@ p.mrs-child-block-notice {
   font-size: 12px;
   justify-content: center;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .mrs-logo-carousel-single-slide-sidebar-tab-content .mrs-media-control__wrapper .mrs-media-control__clickable {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .sndr-logo-carousel-single-slide-sidebar-tab-content .sndr-media-control__wrapper .sndr-media-control__clickable {
   position: absolute;
   top: 0;
   right: 0;
 }
-.components-panel__body .mrs-logo-carousel-single-slide-sidebar-tab .components-panel__body.is-opened .components-panel__body-title .components-panel__body-toggle .components-panel__arrow {
+.components-panel__body .sndr-logo-carousel-single-slide-sidebar-tab .components-panel__body.is-opened .components-panel__body-title .components-panel__body-toggle .components-panel__arrow {
   right: 70px;
 }
 /*!************************************************************************************************************************************************************************************!*\
@@ -834,11 +834,11 @@ button.swiper-pagination-bullet {
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper .mrs-logo-carousel .swiper {
+.wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper .sndr-logo-carousel .swiper {
   width: 100%;
   height: 100%;
 }
-.wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper .mrs-logo-carousel .swiper .swiper-wrapper .swiper-slide {
+.wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper .sndr-logo-carousel .swiper .swiper-wrapper .swiper-slide {
   text-align: center;
   font-size: 18px;
   /* Center slide text vertically */
@@ -846,84 +846,84 @@ button.swiper-pagination-bullet {
   justify-content: center;
   align-items: center;
 }
-.wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper .mrs-logo-carousel .swiper .swiper-wrapper .swiper-slide .mrs-logo-carousel-swiper-slider-content-wrapper {
+.wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper .sndr-logo-carousel .swiper .swiper-wrapper .swiper-slide .sndr-logo-carousel-swiper-slider-content-wrapper {
   margin-bottom: 30px;
 }
-.wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper .mrs-logo-carousel .swiper .swiper-wrapper .swiper-slide .mrs-logo-carousel-swiper-slider-content-wrapper .mrs-logo-carousel-swiper-slider-image img {
+.wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper .sndr-logo-carousel .swiper .swiper-wrapper .swiper-slide .sndr-logo-carousel-swiper-slider-content-wrapper .sndr-logo-carousel-swiper-slider-image img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper .mrs-logo-carousel .swiper .swiper-wrapper .swiper-slide .mrs-logo-carousel-swiper-slider-content-wrapper .mrs-logo-carousel-swiper-slider-title h4 {
+.wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper .sndr-logo-carousel .swiper .swiper-wrapper .swiper-slide .sndr-logo-carousel-swiper-slider-content-wrapper .sndr-logo-carousel-swiper-slider-title h4 {
   margin: 30px 0 5px;
 }
-.wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper .mrs-logo-carousel .swiper .swiper-wrapper .swiper-slide .mrs-logo-carousel-swiper-slider-content-wrapper p {
+.wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper .sndr-logo-carousel .swiper .swiper-wrapper .swiper-slide .sndr-logo-carousel-swiper-slider-content-wrapper p {
   margin: 0 0 20px;
 }
-.wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper .mrs-logo-carousel .swiper {
+.wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper .sndr-logo-carousel .swiper {
   margin-left: auto;
   margin-right: auto;
 }
 
 @media only screen and (max-width: 600px) {
-  .wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper.hide-mobile {
+  .wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper.hide-mobile {
     display: none;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 767) {
-  .wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper.hide-tablet {
+  .wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper.hide-tablet {
     display: none;
   }
 }
 @media only screen and (min-width: 768px) {
-  .wp-block-mrs-block-mrs-logo-carousel .mrs-logo-carousel-wrapper.hide-desktop {
+  .wp-block-sndr-block-sndr-logo-carousel .sndr-logo-carousel-wrapper.hide-desktop {
     display: none;
   }
 }
-.components-button-group .components-button.mrs-logo-carousel-title-tag.active {
+.components-button-group .components-button.sndr-logo-carousel-title-tag.active {
   background: #0f7165;
   color: #ffffff;
 }
-.components-button-group .components-button.mrs-logo-carousel-pause-on {
+.components-button-group .components-button.sndr-logo-carousel-pause-on {
   flex-grow: 1;
   justify-content: center;
 }
-.components-button-group .components-button.mrs-logo-carousel-pause-on.active {
+.components-button-group .components-button.sndr-logo-carousel-pause-on.active {
   background: #0f7165;
   color: #ffffff;
 }
-.components-button-group .components-button.mrs-logo-carousel-vertical-align {
+.components-button-group .components-button.sndr-logo-carousel-vertical-align {
   flex-grow: 1;
   justify-content: center;
 }
-.components-button-group .components-button.mrs-logo-carousel-vertical-align.active {
+.components-button-group .components-button.sndr-logo-carousel-vertical-align.active {
   background: #0f7165;
   color: #ffffff;
 }
-.components-button-group.mrs-logo-carousel-vertical-align-group {
+.components-button-group.sndr-logo-carousel-vertical-align-group {
   display: flex;
   margin-top: 10px;
 }
 
-.components-panel__body .mrs-logo-carousel-add-single-slide-sidebar-tab {
+.components-panel__body .sndr-logo-carousel-add-single-slide-sidebar-tab {
   display: flex;
   justify-content: center;
   background: #0f7165;
   margin: 15px 0;
 }
-.components-panel__body .mrs-logo-carousel-add-single-slide-sidebar-tab .components-button {
+.components-panel__body .sndr-logo-carousel-add-single-slide-sidebar-tab .components-button {
   outline: none;
   border: none;
   width: 100%;
 }
-.components-panel__body .mrs-logo-carousel-add-single-slide-sidebar-tab .components-button .dashicons-plus {
+.components-panel__body .sndr-logo-carousel-add-single-slide-sidebar-tab .components-button .dashicons-plus {
   color: #fff;
 }
 
-.mrs-logo-carousel-advance-tab-panel .components-input-control__container,
-.mrs-logo-carousel-style-tab-panel-slider .components-input-control__container {
+.sndr-logo-carousel-advance-tab-panel .components-input-control__container,
+.sndr-logo-carousel-style-tab-panel-slider .components-input-control__container {
   top: 10px;
 }
 

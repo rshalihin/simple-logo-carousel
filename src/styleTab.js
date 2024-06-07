@@ -1,11 +1,11 @@
 import { __ } from '@wordpress/i18n';
 import { PanelColorSettings } from "@wordpress/block-editor";
 import { PanelBody, ButtonGroup, Button, __experimentalDivider as Divider, __experimentalBoxControl as BoxControl, SelectControl } from '@wordpress/components';
-import RSRangeControl from './component/RSRangeControl/RSRangeControl';
+import SNDRRangeControl from './component/SNDRRangeControl/SNDRRangeControl';
 
 const StyleTab = ({attributes, setAttributes}) => {
 
-    const {sliderAlignment, sliderBGColor, sliderTitleColor, sliderDesColor, navigationArrowColor, paginationDotColor, enableNavigationArrows,  navigationArrowSize, sliderBorder, sliderBorderStyle, sliderBorderColor, singleSlideBorderColor, singleSlideBorderStyle, singleSlideBorder, singleSlideMargin, singleSlidePadding} = attributes;
+    const {sliderAlignment, sliderBGColor, sliderTitleColor, sliderDesColor, navigationArrowColor, paginationDotColor, enableNavigationArrows,  navigationArrowSize, sliderBorder, sliderBorderStyle, sliderBorderColor, singleSlideBorderColor, singleSlideBorderStyle, singleSlideBorder, singleSlideMargin, singleSlidePadding, contentAlignment } = attributes;
 
     const onChangeSliderBorder = (newValue) => {
         setAttributes({sliderBorder: newValue});
@@ -24,36 +24,46 @@ const StyleTab = ({attributes, setAttributes}) => {
 
     return(
         <>
-        <PanelBody title={ __( 'Content', 'mrs-logo-carousel' ) } initialOpen={ false }>
+        <PanelBody title={ __( 'Content', 'sndr-logo-carousel' ) } initialOpen={ false }>
             <p>Text Alignment</p>
-            <ButtonGroup className='mrs-logo-carousel-vertical-align-group'>
-                <Button className={`mrs-logo-carousel-vertical-align ${('Left' == sliderAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({sliderAlignment: 'Left'})}>Left</Button>
+            <ButtonGroup className='sndr-logo-carousel-vertical-align-group'>
+                <Button className={`sndr-logo-carousel-vertical-align ${('Left' == sliderAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({sliderAlignment: 'Left'})}>Left</Button>
 
-                <Button className={`mrs-logo-carousel-vertical-align ${('Center' == sliderAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({sliderAlignment: 'Center'})}>Center</Button>
+                <Button className={`sndr-logo-carousel-vertical-align ${('Center' == sliderAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({sliderAlignment: 'Center'})}>Center</Button>
 
-                <Button className={`mrs-logo-carousel-vertical-align ${('Right' == sliderAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({sliderAlignment: 'Right'})}>Right</Button>
+                <Button className={`sndr-logo-carousel-vertical-align ${('Right' == sliderAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({sliderAlignment: 'Right'})}>Right</Button>
             </ButtonGroup>
             <Divider />
+            <p>Content Alignment</p>
+            <ButtonGroup className='sndr-logo-carousel-vertical-align-group'>
+                <Button className={`sndr-logo-carousel-vertical-align ${('Top' == contentAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({contentAlignment: 'Top'})}>Top</Button>
+
+                <Button className={`sndr-logo-carousel-vertical-align ${('Center' == contentAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({contentAlignment: 'Center'})}>Center</Button>
+
+                <Button className={`sndr-logo-carousel-vertical-align ${('Bottom' == contentAlignment) ? 'active' : ''}`} onClick={()=> setAttributes({contentAlignment: 'Bottom'})}>Bottom</Button>
+            </ButtonGroup>
+
+            <Divider />
             <PanelColorSettings
-                title={__('Content Color Settings', 'mrs-logo-carousel')}
+                title={__('Content Color Settings', 'sndr-logo-carousel')}
                 disableCustomColors={false}
                 colorSettings={[
                     {
-                        label: __('Title Color', 'mrs-log-carousel'),
+                        label: __('Title Color', 'sndr-log-carousel'),
                         value: sliderTitleColor,
                         onChange: (value) => {
                             setAttributes({sliderTitleColor: value})
                         }
                     },
                     {
-                        label: __('Description Color', 'mrs-log-carousel'),
+                        label: __('Description Color', 'sndr-log-carousel'),
                         value: sliderDesColor,
                         onChange: (value) => {
                             setAttributes({sliderDesColor: value})
                         }
                     },
                     {
-                        label: __('Background Color', 'mrs-log-carousel'),
+                        label: __('Background Color', 'sndr-log-carousel'),
                         value: sliderBGColor,
                         onChange: (value) => {
                             setAttributes({ sliderBGColor: value })
@@ -63,13 +73,13 @@ const StyleTab = ({attributes, setAttributes}) => {
             />
         </PanelBody>
 
-        <PanelBody title={__('Slider Settings', 'mrs-log-carousel')} initialOpen={false} className='mrs-logo-carousel-style-tab-panel-slider'>
+        <PanelBody title={__('Slider Settings', 'sndr-log-carousel')} initialOpen={false} className='sndr-logo-carousel-style-tab-panel-slider'>
             <PanelColorSettings
-                title={__('Slider Border Color', 'mrs-logo-carousel')}
+                title={__('Slider Border Color', 'sndr-logo-carousel')}
                 disableCustomColors={false}
                 colorSettings={[
                     {
-                        label: __('Slider Border Color', 'mrs-logo-carousel'),
+                        label: __('Slider Border Color', 'sndr-logo-carousel'),
                         value: sliderBorderColor,
                         onChange: (value) => {
                             setAttributes({ sliderBorderColor: value });
@@ -78,7 +88,7 @@ const StyleTab = ({attributes, setAttributes}) => {
                 ]}
             />
             <SelectControl
-                label={__('Border Style', 'mrs-logo-carousel')}
+                label={__('Border Style', 'sndr-logo-carousel')}
                 options={[
                     {  label: 'None', value: 'none'},
                     { label: 'Solid', value: 'solid' },
@@ -93,20 +103,20 @@ const StyleTab = ({attributes, setAttributes}) => {
                 onChange={(value) => setAttributes({sliderBorderStyle: value})}
             />
             <BoxControl
-                label={__('Slider Border Settings', 'mrs-logo-carousel')}
+                label={__('Slider Border Settings', 'sndr-logo-carousel')}
                 values={sliderBorder}
                 onChange={onChangeSliderBorder}
             />
             
         </PanelBody>
 
-        <PanelBody title={__('Single Slide Settings', 'mrs-log-carousel')} initialOpen={false} className='mrs-logo-carousel-style-tab-panel-slider'>
+        <PanelBody title={__('Single Slide Settings', 'sndr-log-carousel')} initialOpen={false} className='sndr-logo-carousel-style-tab-panel-slider'>
             <PanelColorSettings
-                title={__('Slider Border Color', 'mrs-logo-carousel')}
+                title={__('Slider Border Color', 'sndr-logo-carousel')}
                 disableCustomColors={false}
                 colorSettings={[
                     {
-                        label: __('Single Slide Border Color', 'mrs-logo-carousel'),
+                        label: __('Single Slide Border Color', 'sndr-logo-carousel'),
                         value: singleSlideBorderColor,
                         onChange: (value) => {
                             setAttributes({ singleSlideBorderColor: value });
@@ -115,7 +125,7 @@ const StyleTab = ({attributes, setAttributes}) => {
                 ]}
             />
             <SelectControl
-                label={__('Single Slide Border Style', 'mrs-logo-carousel')}
+                label={__('Single Slide Border Style', 'sndr-logo-carousel')}
                 options={[
                     {  label: 'None', value: 'none'},
                     { label: 'Solid', value: 'solid' },
@@ -130,36 +140,37 @@ const StyleTab = ({attributes, setAttributes}) => {
                 onChange={(value) => setAttributes({singleSlideBorderStyle: value})}
             />
             <BoxControl
-                label={__('Single Slide Border Settings', 'mrs-logo-carousel')}
+                label={__('Single Slide Border Settings', 'sndr-logo-carousel')}
                 values={singleSlideBorder}
                 onChange={onChangeSingleSlideBorder}
             />
             <Divider />
             <BoxControl
-                    label={__('Single Slide Margin', 'mrs-logo-carousel')}
+                    label={__('Single Slide Margin', 'sndr-logo-carousel')}
                     values={singleSlideMargin}
                     onChange={onChangeSingleSlideMargin}
                 />
+                <Divider />
                 <BoxControl
-                    label={__('Single Slide Padding', 'mrs-logo-carousel')}
+                    label={__('Single Slide Padding', 'sndr-logo-carousel')}
                     values={singleSlidePadding}
                     onChange={onChangeSingleSlidePadding}
                 />        
         </PanelBody>
 
-        <PanelBody title={__('Navigation Settings', 'mrs-log-carousel')} initialOpen={false}>
+        <PanelBody title={__('Navigation Settings', 'sndr-log-carousel')} initialOpen={false}>
             <PanelColorSettings
                 disableCustomColors={false}
                 colorSettings={[
                     {
-                        label: __('Navigation Arrow Color', 'mrs-log-carousel'),
+                        label: __('Navigation Arrow Color', 'sndr-log-carousel'),
                         value: navigationArrowColor,
                         onChange: (value) => {
                             setAttributes({navigationArrowColor: value})
                         }
                     },
                     {
-                        label: __('Pagination Dot Color', 'mrs-log-carousel'),
+                        label: __('Pagination Dot Color', 'sndr-log-carousel'),
                         value: paginationDotColor,
                         onChange: (value) => {
                             setAttributes({paginationDotColor: value})
@@ -167,19 +178,19 @@ const StyleTab = ({attributes, setAttributes}) => {
                     }
                 ]}
             />
-            <p>{__('This color settings will be shown in the front-end', 'mrs-logo-carousel')}</p>
+            <p>{__('This color settings will be shown in the front-end', 'sndr-logo-carousel')}</p>
             <Divider />
             {enableNavigationArrows && (
             <>
-                <RSRangeControl
-                    label={__('Navigation Arrow Size', 'mrs-logo-carousel')}
+                <SNDRRangeControl
+                    label={__('Navigation Arrow Size', 'sndr-logo-carousel')}
                     min={5}
                     max={100}
                     attributes={ navigationArrowSize }
                     attributesKey={'navigationArrowSize'}
                     setAttributes={ setAttributes }
                 />
-                <p>{__('This Navigation arrow size settings will be shown in the front-end', 'mrs-logo-carousel')}</p>
+                <p>{__('This Navigation arrow size settings will be shown in the front-end', 'sndr-logo-carousel')}</p>
             </>
             )
             }

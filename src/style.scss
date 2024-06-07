@@ -1,11 +1,11 @@
 
-.wp-block-mrs-block-mrs-logo-carousel {
-    .mrs-logo-carousel-wrapper {
-        .mrs-logo-carousel {
+.wp-block-sndr-block-sndr-logo-carousel {
+    .sndr-logo-carousel-wrapper {
+        .sndr-logo-carousel {
             .swiper {
                 width: 100%;
                 height: 100%;
-                &.mrsSwiper {
+                &.sndrSwiper {
                     .swiper-wrapper {
                         .swiper-slide {
                             text-align: center;
@@ -31,8 +31,8 @@
 
 
 @media only screen and ( max-width: 600px) {
-	.wp-block-mrs-block-mrs-logo-carousel {
-		.mrs-logo-carousel-wrapper {
+	.wp-block-sndr-block-sndr-logo-carousel {
+		.sndr-logo-carousel-wrapper {
 			&.hide-mobile {
 				display: none;
 			}
@@ -40,8 +40,8 @@
 	}
 }
 @media screen and ( min-width: 601px) and ( max-width: 767 ) {
-	.wp-block-mrs-block-mrs-logo-carousel {
-		.mrs-logo-carousel-wrapper {
+	.wp-block-sndr-block-sndr-logo-carousel {
+		.sndr-logo-carousel-wrapper {
 			&.hide-tablet {
 				display: none;
 			}
@@ -49,8 +49,8 @@
 	}
 }
 @media only screen and ( min-width: 768px) {
-	.wp-block-mrs-block-mrs-logo-carousel {
-		.mrs-logo-carousel-wrapper {
+	.wp-block-sndr-block-sndr-logo-carousel {
+		.sndr-logo-carousel-wrapper {
 			&.hide-desktop {
 				display: none;
 			}
