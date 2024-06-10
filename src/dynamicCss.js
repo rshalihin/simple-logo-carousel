@@ -50,7 +50,7 @@ const dynamicCss = (attributes) => {
             'padding-right' : sliderPadding.right,
             'padding-left' : sliderPadding.left
         },
-        [`.sndr-logo-carousel-${uniqueId} .swiper-wrapper .swiper-slide`] : {
+        [`.sndr-logo-carousel-${uniqueId} .swiper-wrapper .swiper-slide .sndr-logo-carousel-swiper-slider-content-wrapper`] : {
             'background': sliderBGColor,
             'border-top' : `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
             'border-bottom' : `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,

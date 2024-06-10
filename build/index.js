@@ -227,6 +227,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import {  } from '@wordpress/components';
 
 const AdvanceTab = ({
   attributes,
@@ -793,7 +794,7 @@ const dynamicCss = attributes => {
       'padding-right': sliderPadding.right,
       'padding-left': sliderPadding.left
     },
-    [`.sndr-logo-carousel-${uniqueId} .swiper-wrapper .swiper-slide`]: {
+    [`.sndr-logo-carousel-${uniqueId} .swiper-wrapper .swiper-slide .sndr-logo-carousel-swiper-slider-content-wrapper`]: {
       'background': sliderBGColor,
       'border-top': `${singleSlideBorder.top} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
       'border-bottom': `${singleSlideBorder.bottom} ${singleSlideBorderStyle} ${singleSlideBorderColor}`,
@@ -1433,7 +1434,21 @@ const StyleTab = ({
     singleSlidePadding,
     contentAlignment
   } = attributes;
+
+  // const pxCheck = (value) => {
+  //     for( let side in value ) {            
+  //         let uniteCheck = value[side].slice( value[side].length -2 );
+  //         console.log(uniteCheck);
+  //         if ( uniteCheck !== 'px' ) {
+  //             value[side] = value[side] + 'px';   
+  //             // console.log(value[side]);             
+  //             return value[side];
+  //         }
+  //     }
+  // }
+
   const onChangeSliderBorder = newValue => {
+    pxCheck(newValue);
     setAttributes({
       sliderBorder: newValue
     });

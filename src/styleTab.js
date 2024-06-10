@@ -7,7 +7,20 @@ const StyleTab = ({attributes, setAttributes}) => {
 
     const {sliderAlignment, sliderBGColor, sliderTitleColor, sliderDesColor, navigationArrowColor, paginationDotColor, enableNavigationArrows,  navigationArrowSize, sliderBorder, sliderBorderStyle, sliderBorderColor, singleSlideBorderColor, singleSlideBorderStyle, singleSlideBorder, singleSlideMargin, singleSlidePadding, contentAlignment } = attributes;
 
+    // const pxCheck = (value) => {
+    //     for( let side in value ) {            
+    //         let uniteCheck = value[side].slice( value[side].length -2 );
+    //         console.log(uniteCheck);
+    //         if ( uniteCheck !== 'px' ) {
+    //             value[side] = value[side] + 'px';   
+    //             // console.log(value[side]);             
+    //             return value[side];
+    //         }
+    //     }
+    // }
+
     const onChangeSliderBorder = (newValue) => {
+        pxCheck(newValue);
         setAttributes({sliderBorder: newValue});
     }
     const onChangeSingleSlideBorder = (newValue) => {

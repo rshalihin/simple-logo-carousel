@@ -1,7 +1,7 @@
 import { __ } from '@wordpress/i18n';
 import { PanelBody, __experimentalBoxControl as BoxControl } from '@wordpress/components';
 import Toggle from './component/toggle/toggle';
-import {  } from '@wordpress/components';
+// import {  } from '@wordpress/components';
 
 const AdvanceTab = ({attributes, setAttributes}) => {
     const { desktopHide, tabletHide, mobileHide, sliderMargin, sliderPadding } = attributes;

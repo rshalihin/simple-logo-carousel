@@ -4,6 +4,7 @@ import { RichText, MediaPlaceholder } from '@wordpress/block-editor';
 const RSSlider = ({ dataId, attributes, setAttributes}) => {
 
     const { sliderId, enableTitle, sliderTitle, enableDescription, sliderDescription, titleTag, descriptionTag, sliderLogoImage, logoPosition, sliderTitleColor, sliderDesColor, sliderAlignment } = attributes;
+    
     const onChangeLogoTitle = ( id, newTitle) => {
       const updateArray =   sliderTitle.map((item)=>{
             if(parseInt(item.id) === parseInt(id)) {
