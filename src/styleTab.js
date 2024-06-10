@@ -20,7 +20,7 @@ const StyleTab = ({attributes, setAttributes}) => {
     // }
 
     const onChangeSliderBorder = (newValue) => {
-        pxCheck(newValue);
+        // pxCheck(newValue);
         setAttributes({sliderBorder: newValue});
     }
     const onChangeSingleSlideBorder = (newValue) => {
